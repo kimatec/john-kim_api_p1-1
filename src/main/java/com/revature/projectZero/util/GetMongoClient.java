@@ -36,7 +36,7 @@ public class GetMongoClient {
         Properties appProperties = new Properties();
 
         try {
-            appProperties.load(new FileReader("john_callahan_p0/src/main/resources/applicationProperties.properties"));
+            appProperties.load(new FileReader("src/main/resources/applicationProperties.properties"));
         } catch (Exception e) {
             e.printStackTrace();
             try {
