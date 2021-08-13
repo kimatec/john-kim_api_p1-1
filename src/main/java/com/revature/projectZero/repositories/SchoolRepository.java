@@ -10,12 +10,13 @@ import com.revature.projectZero.pojos.Student;
 import com.revature.projectZero.util.GetMongoClient;
 import com.revature.projectZero.util.exceptions.InvalidRequestException;
 import com.revature.projectZero.util.exceptions.ResourcePersistenceException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
@@ -30,11 +31,19 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
  */
 
 public class SchoolRepository {
+    private final MongoClient mongoClient;
+
+    public SchoolRepository(MongoClient mongoClient) {
+        this.mongoClient = mongoClient;
+    }
+
+    public SchoolRepository() {
+        this.mongoClient = GetMongoClient.generate().getConnection();
+    }
+
 
     // These are used quite often in the CRUD methods.
-    Logger logger = LogManager.getLogger(SchoolRepository.class);
-    private final GetMongoClient connection = generate();
-    private final MongoClient mongoClient = connection.getConnection();
+    Logger logger = LoggerFactory.getLogger(SchoolRepository.class);
     private final ObjectMapper mapper = new ObjectMapper();
     CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true).build();
     CodecRegistry pojoCodecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider));

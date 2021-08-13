@@ -6,8 +6,9 @@ import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.revature.projectZero.util.exceptions.ResourcePersistenceException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.FileReader;
 import java.util.Collections;
 import java.util.Properties;
@@ -28,7 +29,7 @@ public class GetMongoClient {
     private MongoClient mongoClient;
 
     // Static implementation of Logger to work with the getConnection() method.
-    static Logger logger = LogManager.getLogger(GetMongoClient.class);
+    static Logger logger = LoggerFactory.getLogger(GetMongoClient.class);
 
     private GetMongoClient() {
 
@@ -63,6 +64,9 @@ public class GetMongoClient {
             logger.error("Threw an Exception at GetMongoClient::Constructor, full StackTrace follows: " + e);
         }
     }
+
+    // Shuts down the Mongo connection
+    public void cleanUp() { mongoClient.close(); }
 
     // Singleton Design; More than one 'GetConnection' cannot exist at any given time.
     public static GetMongoClient generate() {

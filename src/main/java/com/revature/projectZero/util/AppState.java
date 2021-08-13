@@ -5,8 +5,8 @@ import java.io.InputStreamReader;
 
 import com.revature.projectZero.repositories.SchoolRepository;
 import com.revature.projectZero.service.ValidationService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The beating heart of the application. So long as appRunning is true,
@@ -27,7 +27,7 @@ public class AppState {
 
     }
 
-    Logger logger = LogManager.getLogger(AppState.class);
+    Logger logger = LoggerFactory.getLogger(AppState.class);
     public void startApp() {
 
     }
