@@ -1,4 +1,4 @@
-package com.revature.projectZero.pojos;
+package com.revature.johnKimAPI.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Objects;

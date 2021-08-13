@@ -1,16 +1,14 @@
-package com.revature.projectZero.web.util;
+package com.revature.johnKimAPI.web.util;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
 import ch.qos.logback.core.joran.spi.JoranException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.client.MongoClient;
-import com.revature.projectZero.repositories.SchoolRepository;
-import com.revature.projectZero.service.ValidationService;
-import com.revature.projectZero.util.GetMongoClient;
-import com.revature.projectZero.web.servlet.UserServlet;
+import com.revature.johnKimAPI.repositories.SchoolRepository;
+import com.revature.johnKimAPI.service.ValidationService;
+import com.revature.johnKimAPI.util.GetMongoClient;
 // TODO: Find out what this is!
-import com.sun.xml.internal.ws.developer.MemberSubmissionAddressing;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletContext;

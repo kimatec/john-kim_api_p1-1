@@ -1,4 +1,4 @@
-package com.revature.projectZero.web.dtos;
+package com.revature.johnKimAPI.web.dtos;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

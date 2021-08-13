@@ -1,10 +1,10 @@
-package com.revature.projectZero.util;
+package com.revature.johnKimAPI.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import com.revature.projectZero.repositories.SchoolRepository;
-import com.revature.projectZero.service.ValidationService;
+import com.revature.johnKimAPI.repositories.SchoolRepository;
+import com.revature.johnKimAPI.service.ValidationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

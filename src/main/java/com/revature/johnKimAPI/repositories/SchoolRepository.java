@@ -1,15 +1,15 @@
-package com.revature.projectZero.repositories;
+package com.revature.johnKimAPI.repositories;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.client.*;
-import com.revature.projectZero.pojos.Course;
-import com.revature.projectZero.pojos.Enrolled;
-import com.revature.projectZero.pojos.Faculty;
-import com.revature.projectZero.pojos.Student;
-import com.revature.projectZero.util.GetMongoClient;
-import com.revature.projectZero.util.exceptions.InvalidRequestException;
-import com.revature.projectZero.util.exceptions.ResourcePersistenceException;
+import com.revature.johnKimAPI.pojos.Course;
+import com.revature.johnKimAPI.pojos.Enrolled;
+import com.revature.johnKimAPI.pojos.Faculty;
+import com.revature.johnKimAPI.pojos.Student;
+import com.revature.johnKimAPI.util.GetMongoClient;
+import com.revature.johnKimAPI.util.exceptions.InvalidRequestException;
+import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import org.bson.Document;
 import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistry;
@@ -20,7 +20,6 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
-import static com.revature.projectZero.util.GetMongoClient.generate;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 

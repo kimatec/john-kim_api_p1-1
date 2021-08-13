@@ -1,11 +1,11 @@
-package com.revature.projectZero.services;
+package com.revature.johnKimAPI.services;
 
-import com.revature.projectZero.pojos.Course;
-import com.revature.projectZero.pojos.Faculty;
-import com.revature.projectZero.pojos.Student;
-import com.revature.projectZero.repositories.SchoolRepository;
-import com.revature.projectZero.service.ValidationService;
-import com.revature.projectZero.util.exceptions.InvalidRequestException;
+import com.revature.johnKimAPI.pojos.Course;
+import com.revature.johnKimAPI.pojos.Faculty;
+import com.revature.johnKimAPI.pojos.Student;
+import com.revature.johnKimAPI.repositories.SchoolRepository;
+import com.revature.johnKimAPI.service.ValidationService;
+import com.revature.johnKimAPI.util.exceptions.InvalidRequestException;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

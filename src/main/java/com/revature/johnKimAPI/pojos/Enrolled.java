@@ -1,30 +1,30 @@
-package com.revature.projectZero.pojos;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+package com.revature.johnKimAPI.pojos;
 
 import java.util.Objects;
 
 /**
- * This POJO is necessary to keep track of the 'course' objects compiled by teachers and stored into the MongoDB.
+ * This POJO is necessary because it is where the username of a student is stored and then persisted
+ * to a separate 'enrolled' database inside of MongoDB. Standard courses need to be separate because
+ * they aren't tagged with any specific student.
  */
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Course {
+public class Enrolled {
     private String classID;
+    private String username;
     private String name;
     private String desc;
     private String teacher;
     boolean isOpen;
 
-    // Empty, no args constructor necessary for Mongo to grab the course object.
-    public Course() {}
+    // Empty, no-args constructor is necessary for the POJO to be grabbed my Mongo.
+    public Enrolled() {}
 
-    public Course(String name, String id, String desc, String teacher, boolean isOpen) {
+    public Enrolled(String username, String name, String id, String desc, String teacher) {
+        this.username = username;
         this.name = name;
         this.classID = id;
         this.desc = desc;
         this.teacher = teacher;
-        this.isOpen = isOpen;
     }
 
     public String getClassID() {
@@ -67,23 +67,32 @@ public class Course {
         isOpen = open;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Course course = (Course) o;
-        return isOpen == course.isOpen && Objects.equals(classID, course.classID) && Objects.equals(name, course.name) && Objects.equals(desc, course.desc) && Objects.equals(teacher, course.teacher);
+        Enrolled enrolled = (Enrolled) o;
+        return isOpen == enrolled.isOpen && Objects.equals(classID, enrolled.classID) && Objects.equals(username, enrolled.username) && Objects.equals(name, enrolled.name) && Objects.equals(desc, enrolled.desc) && Objects.equals(teacher, enrolled.teacher);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(classID, name, desc, teacher, isOpen);
+        return Objects.hash(classID, username, name, desc, teacher, isOpen);
     }
 
     @Override
     public String toString() {
-        return "Course{" +
+        return "Enrolled{" +
                 "classID='" + classID + '\'' +
+                ", username='" + username + '\'' +
                 ", name='" + name + '\'' +
                 ", desc='" + desc + '\'' +
                 ", teacher='" + teacher + '\'' +

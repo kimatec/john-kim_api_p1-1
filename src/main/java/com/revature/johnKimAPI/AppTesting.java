@@ -1,6 +1,6 @@
-package com.revature.projectZero;
+package com.revature.johnKimAPI;
 
-import com.revature.projectZero.util.AppState;
+import com.revature.johnKimAPI.util.AppState;
 
 /**
  * The purpose of this application is to allow users to create and log in with student accounts, where they may
