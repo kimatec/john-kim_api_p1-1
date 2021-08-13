@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Initialized the beginning basis of our API">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Implemented a ContextLoaderListener">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/repositories/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/repositories/SchoolRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/AppState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/AppState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/GetMongoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/GetMongoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/util/ContextLoaderListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/dtos/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/dtos/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/dtos/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/dtos/ErrorResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +42,14 @@
       <option name="presentableId" value="Default" />
       <updated>1628881038387</updated>
     </task>
+    <task id="LOCAL-00001" summary="Implemented a ContextLoaderListener">
+      <created>1628882236825</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628882236825</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -62,6 +66,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialized the beginning basis of our API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialized the beginning basis of our API" />
+    <MESSAGE value="Implemented a ContextLoaderListener" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented a ContextLoaderListener" />
   </component>
 </project>
