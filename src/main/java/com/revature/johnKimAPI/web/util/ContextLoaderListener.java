@@ -8,9 +8,7 @@ import com.mongodb.client.MongoClient;
 import com.revature.johnKimAPI.repositories.SchoolRepository;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.GetMongoClient;
-// TODO: Find out what this is!
 import org.slf4j.LoggerFactory;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
