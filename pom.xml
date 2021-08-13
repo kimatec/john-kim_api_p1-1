@@ -73,7 +73,7 @@
                     <configuration>
                         <url>http://localhost:8080/manager/text</url>
                         <server>LocalTomcat</server>
-                        <path>/test-app</path>
+                        <path>/kim-john_api</path>
                     </configuration>
                 </plugin>
             </plugins>
