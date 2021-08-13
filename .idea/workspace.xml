@@ -4,31 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Committing three POJOs for the purposes of encapsulation">
-      <change beforePath="$PROJECT_DIR$/john_callahan_p0/src/main/resources/app.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/AppTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/AppTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/pojos/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/pojos/Enrolled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Enrolled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/pojos/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Faculty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/pojos/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/repositories/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/AppState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/AppState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/GetMongoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/GetMongoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/exceptions/InvalidRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/exceptions/InvalidRequestException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/util/exceptions/ResourcePersistenceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/exceptions/ResourcePersistenceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/dtos/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/dtos/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/ErrorResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/dtos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/revature/projectZero/services/ValidationServiceTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/revature/johnKimAPI/services/ValidationServiceTestSuite.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -80,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628882838155</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable.">
+      <created>1628883207067</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628883207067</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +97,7 @@
     <MESSAGE value="Initialized the beginning basis of our API" />
     <MESSAGE value="Implemented a ContextLoaderListener" />
     <MESSAGE value="Committing three POJOs for the purposes of encapsulation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing three POJOs for the purposes of encapsulation" />
+    <MESSAGE value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
   </component>
 </project>
