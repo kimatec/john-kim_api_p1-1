@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/exceptions/ResourceNotFoundException.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added a skeleton to the User Servlet">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -44,6 +45,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -78,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628883207067</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added a skeleton to the User Servlet">
+      <created>1628884202258</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628884202258</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +107,7 @@
     <MESSAGE value="Implemented a ContextLoaderListener" />
     <MESSAGE value="Committing three POJOs for the purposes of encapsulation" />
     <MESSAGE value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
+    <MESSAGE value="Added a skeleton to the User Servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a skeleton to the User Servlet" />
   </component>
 </project>
