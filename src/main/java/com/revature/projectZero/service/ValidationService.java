@@ -7,9 +7,13 @@ import com.revature.projectZero.pojos.Faculty;
 import com.revature.projectZero.pojos.Student;
 import com.revature.projectZero.repositories.SchoolRepository;
 import com.revature.projectZero.util.exceptions.ResourcePersistenceException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 import java.util.List;
+
+import java.util.logging.LogManager;
 import java.util.regex.Pattern;
 
 /**
@@ -23,7 +27,7 @@ public class ValidationService {
 
         public ValidationService(SchoolRepository studentRepo){ this.schoolRepo = studentRepo; }
 
-        Logger logger = LogManager.getLogger(ValidationService.class);
+        Logger logger = LoggerFactory.getLogger(ValidationService.class);
         private boolean isValid = true;
         private Student authStudent;
         private Faculty authFac;

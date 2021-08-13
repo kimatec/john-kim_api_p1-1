@@ -10,7 +10,7 @@ import com.revature.projectZero.util.AppState;
  * the courses created by other mentors.
  */
 
-public class App {
+public class AppTesting {
 
     public static void main(String[] args) {
         AppState app = new AppState();
