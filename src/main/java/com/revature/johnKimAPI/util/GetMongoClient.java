@@ -33,26 +33,14 @@ public class GetMongoClient {
 
     private GetMongoClient() {
 
-        // Find the '.properties' file and read the data from it.
-        Properties appProperties = new Properties();
+        ipAddress = System.getProperty("ipAddress");
+        port = Integer.parseInt(System.getProperty("port"));
+        String dbName = System.getProperty("dbName");
+        String username = System.getProperty("username");
+        String password = System.getProperty("password");
 
-        try {
-            appProperties.load(new FileReader("src/main/resources/applicationProperties.properties"));
-        } catch (Exception e) {
-            e.printStackTrace();
-            try {
-                throw new ResourcePersistenceException("Unable to load the properties file.");
-            } catch (ResourcePersistenceException rpe) {
-                logger.error(rpe.getMessage(), rpe);
-            }
-        }
-        ipAddress = appProperties.getProperty("ipAddress");
-        port = Integer.parseInt(appProperties.getProperty("port"));
-        String dbName = appProperties.getProperty("dbName");
-        String username = appProperties.getProperty("username");
-        String password = appProperties.getProperty("password");
-
-        // Compile all of the data from the properties file into a MongoClient called, for simplicity, 'mongoClient'.
+        // Compile all of the data from the properties environment variables into a MongoClient called,
+        // for simplicity, 'mongoClient'.
         try {
             this.mongoClient = MongoClients.create(
                     MongoClientSettings.builder()
