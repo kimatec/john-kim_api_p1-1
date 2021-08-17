@@ -30,10 +30,6 @@
         <servlet-name>UserServlet</servlet-name> <!-- Mandatory tag -->
         <servlet-class>com.revature.servlets.UserServlet</servlet-class> <!-- Mandatory tag -->
         <!-- Provide parameters to the ServletConfig (specific to this servlet) -->
-        <init-param> <!-- Optional tag -->
-            <param-name>someParam</param-name>
-            <param-value>someValue</param-value>
-        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserServlet</servlet-name> <!-- Mandatory tag -->

@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent.">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Changed logback.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/HealthCheckServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629233159359</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Changed logback.xml">
+      <created>1629234430299</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629234430299</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,7 +202,8 @@
     <MESSAGE value="changed the name of the artifact in the POM folder" />
     <MESSAGE value="Bug fixing. Seeing if this compiles." />
     <MESSAGE value="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent." />
+    <MESSAGE value="Changed logback.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed logback.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
