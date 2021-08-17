@@ -6,14 +6,19 @@ phases:
       java: corretto8
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+      - aws s3 cp s3://john-callahan-webpage-resources/applicationProperties.properties ./src/main/resources/applicationProperties.properties
   build:
     commands:
       - echo Build started on `date`
-      - mvn install
+      - mvn package
+      - mv target/*.war ./john-kim_api_p1-1.war
   post_build:
     commands:
       - echo Build completed on `date`
+      - unzip john-kim_api_p1-1.war -d artifact/
+      - mv artifact/WEB-INF WEB-INF
 artifacts:
   files:
-    - target/john-kim_api_p1-1.0-SNAPSHOT.war
+    - WEB-INF/**/*
+  name: artifact
+

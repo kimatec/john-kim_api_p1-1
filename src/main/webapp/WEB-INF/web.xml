@@ -13,15 +13,19 @@
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
-        <welcome-file>default.html</welcome-file>
-        <welcome-file>default.htm</welcome-file>
-        <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
+
+    <!-- Listener class to allow for these to be loaded via context/programmatic means -->
+    <listener>
+        <listener-class>com.revature.johnKimAPI.web.util.ContextLoaderListener</listener-class>
+    </listener>
+
     <!-- Provide parameters to the ServletContext (available to all servlets in this context)-->
     <context-param>
-        <param-name>someParam</param-name>
-        <param-value>someValue</param-value>
+        <param-name>logback-config</param-name>
+        <param-value>WEB-INF/classes/logback.xml</param-value>
     </context-param>
+
     <servlet>
         <servlet-name>UserServlet</servlet-name> <!-- Mandatory tag -->
         <servlet-class>com.revature.servlets.UserServlet</servlet-class> <!-- Mandatory tag -->
@@ -35,17 +39,4 @@
         <servlet-name>UserServlet</servlet-name> <!-- Mandatory tag -->
         <url-pattern>/users/*</url-pattern> <!-- Mandatory tag -->
     </servlet-mapping>
-    <filter>
-        <filter-name>CorsFilter</filter-name> <!-- Mandatory tag -->
-        <filter-class>com.revature.filters.CorsFilter</filter-class> <!-- Mandatory tag -->
-
-        <init-param> <!-- Optional tag -->
-            <param-name>someParam</param-name>
-            <param-value>someValue</param-value>
-        </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>CorsFilter</filter-name> <!-- Mandatory tag -->
-        <url-pattern>/*</url-pattern> <!-- Mandatory tag (unless servlet-name is specified) -->
-    </filter-mapping>
 </web-app>
