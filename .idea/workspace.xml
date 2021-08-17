@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad60d59e-f4b5-4547-aa03-2aa1c9cf6411" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/servlet/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/web/util/ContextLoaderListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="changed the name of the artifact in the POM folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/projectZero/AppTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/GetMongoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/GetMongoClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,35 +16,134 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1wfXM5wA06fDYgZt4ZeAB5s2Tvu" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1wgX7W14qqQI8QskCc7HfSYyGpT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bookstore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6e73e62a-0ab7-4e90-bd0c-5bf1f8ce4d95" name="Changes" comment="" />
-      <created>1628850566873</created>
+      <changelist id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Initialized the beginning basis of our API" />
+      <created>1628881038387</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1628850566873</updated>
+      <updated>1628881038387</updated>
     </task>
+    <task id="LOCAL-00001" summary="Implemented a ContextLoaderListener">
+      <created>1628882236825</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628882236825</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Committing three POJOs for the purposes of encapsulation">
+      <created>1628882838155</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628882838155</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable.">
+      <created>1628883207067</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1628883207067</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added a skeleton to the User Servlet">
+      <created>1628884202258</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628884202258</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Made an index page and configured logback.xml">
+      <created>1628884450405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628884450405</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed a depreciated relic, log4j2.xml.">
+      <created>1628884580672</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628884580672</updated>
+    </task>
+    <task id="LOCAL-00007" summary="QOL changes">
+      <created>1628885330839</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628885330839</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added TestServlet for testing.">
+      <created>1628885836410</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1628885836410</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added buildspec.yml">
+      <created>1628886705836</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1628886705836</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modified buildspec.yml">
+      <created>1628887555760</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1628887555761</updated>
+    </task>
+    <task id="LOCAL-00011" summary="modified the url path">
+      <created>1628889296728</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628889296728</updated>
+    </task>
+    <task id="LOCAL-00012" summary="changed the name of the artifact in the POM folder">
+      <created>1628894103971</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1628894103971</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -63,5 +157,25 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialized the beginning basis of our API" />
+    <MESSAGE value="Implemented a ContextLoaderListener" />
+    <MESSAGE value="Committing three POJOs for the purposes of encapsulation" />
+    <MESSAGE value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
+    <MESSAGE value="Added a skeleton to the User Servlet" />
+    <MESSAGE value="Made an index page and configured logback.xml" />
+    <MESSAGE value="Removed a depreciated relic, log4j2.xml." />
+    <MESSAGE value="QOL changes" />
+    <MESSAGE value="Added TestServlet for testing." />
+    <MESSAGE value="Added buildspec.yml" />
+    <MESSAGE value="Modified buildspec.yml" />
+    <MESSAGE value="modified the url path" />
+    <MESSAGE value="changed the name of the artifact in the POM folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the name of the artifact in the POM folder" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
