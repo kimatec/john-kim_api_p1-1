@@ -12,5 +12,4 @@ public class TestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().write("<h1>/test works!</h1>");
     }
-
 }

@@ -5,13 +5,9 @@ import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.FileReader;
 import java.util.Collections;
-import java.util.Properties;
 
 /**
     This is a Singleton Factory that pumps out connection data for the Mongo Database.
