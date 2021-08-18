@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://java.sun.com/xml/ns/javaee"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         version="2.5">
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
     <display-name>school</display-name>
     <!--
         The container will search the web application directory for one of the following
@@ -15,14 +16,20 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!-- Listener class to allow for these to be loaded via context/programmatic means -->
-    <listener>
-        <listener-class>com.revature.johnKimAPI.web.util.ContextLoaderListener</listener-class>
-    </listener>
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.johnKimAPI.servlets.UserServlet</servlet-class>
+    </servlet>
 
     <!-- Provide parameters to the ServletContext (available to all servlets in this context)-->
     <context-param>
         <param-name>logback-config</param-name>
         <param-value>WEB-INF/classes/logback.xml</param-value>
     </context-param>
+
+    <!-- Listener class to allow for these to be loaded via context/programmatic means -->
+    <listener>
+        <listener-class>com.revature.johnKimAPI.web.util.ContextLoaderListener</listener-class>
+    </listener>
+
 </web-app>

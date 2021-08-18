@@ -4,11 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful.">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added AuthServlet and gave it some body.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logging.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/GetMongoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/GetMongoClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/LoginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/WelcomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/faculty/FacultyCreate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/faculty/FacultyDashboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/faculty/FacultyDelete.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/faculty/FacultyRead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/faculty/FacultyUpdate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/student/StudentDashboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/student/StudentDropCourse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/student/StudentEnrollment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/student/StudentMyClasses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pages/student/StudentRegisterPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pojos/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pojos/Enrolled.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pojos/Faculty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/pojos/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/repositories/SchoolRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/service/ValidationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/util/AppState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/util/GetMongoClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/util/PageRouter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/util/exceptions/InvalidRequestException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/revature/projectZero/util/exceptions/ResourcePersistenceException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/revature/projectZero/services/ValidationServiceTestSuite.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +83,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\punsm\revature-intellij-repos\john-kim_api_p1-1\src\main\resources" />
       <recent name="C:\Users\punsm\revature-intellij-repos\john-kim_api_p1-1\src\main\webapp" />
     </key>
   </component>
@@ -186,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629247092769</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added AuthServlet and gave it some body.">
+      <created>1629251306219</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1629251306219</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,7 +256,8 @@
     <MESSAGE value="Changed logback.xml" />
     <MESSAGE value="Added the HealthCheckServlet." />
     <MESSAGE value="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful." />
+    <MESSAGE value="Added AuthServlet and gave it some body." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added AuthServlet and gave it some body." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

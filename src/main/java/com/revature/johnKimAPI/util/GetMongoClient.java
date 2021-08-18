@@ -32,7 +32,7 @@ public class GetMongoClient {
     private GetMongoClient() {
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
         try {
-            appProperties.load(loader.getResourceAsStream("application.properties"));
+            appProperties.load(loader.getResourceAsStream("applicationProperties.properties"));
         } catch(IOException ioe) {
             System.out.println("File not found!");
         }
