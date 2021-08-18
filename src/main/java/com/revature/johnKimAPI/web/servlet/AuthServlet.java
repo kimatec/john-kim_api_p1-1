@@ -2,13 +2,11 @@ package com.revature.johnKimAPI.web.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
-import com.revature.johnKimAPI.pojos.Student;
+import com.revature.johnKimAPI.pojos.Credentials;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.exceptions.InvalidRequestException;
 import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import com.revature.johnKimAPI.web.dtos.ErrorResponse;
-
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,21 +24,21 @@ public class AuthServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PrintWriter respWriter = resp.getWriter();
         resp.setContentType("application/json");
 
         try {
 
-            Student student = mapper.readValue(req.getInputStream(), Student.class);
+            Credentials student = mapper.readValue(req.getInputStream(), Credentials.class);
+            int hashPass = student.getPassword().hashCode();
 
             // Log the user in!
-            userService.login(student.getUsername(), student.getHashPass());
+            userService.login(student.getUsername(), hashPass);
+
+            // Send them back a 200 with a "success!" message.
+            resp.setStatus(200);
+            resp.getWriter().write("Success!");
 
         } catch (InvalidRequestException | MismatchedInputException e) {
             e.printStackTrace();
