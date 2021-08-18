@@ -22,16 +22,16 @@ public class ContextLoaderListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
-//        MongoClient mongoClient = GetMongoClient.generate().getConnection();
-//        ObjectMapper mapper = new ObjectMapper().findAndRegisterModules();
+        MongoClient mongoClient = GetMongoClient.generate().getConnection();
+        ObjectMapper mapper = new ObjectMapper().findAndRegisterModules();
 
-//        SchoolRepository userRepo = new SchoolRepository(mongoClient);
-//        ValidationService userService = new ValidationService(userRepo);
+        SchoolRepository userRepo = new SchoolRepository(mongoClient);
+        ValidationService userService = new ValidationService(userRepo);
 
         // TODO: Add all of your servlets to here!
         TestServlet testServlet = new TestServlet();
         HealthCheckServlet health = new HealthCheckServlet();
-        AuthServlet authServlet = new AuthServlet();
+        AuthServlet authServlet = new AuthServlet(userService, mapper);
 //        UserServlet userServlet = new UserServlet(userService, mapper);
 
         ServletContext servletContext = sce.getServletContext();

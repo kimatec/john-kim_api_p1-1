@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added the HealthCheckServlet.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
@@ -180,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629236144137</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful.">
+      <created>1629247092769</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1629247092769</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,7 +219,8 @@
     <MESSAGE value="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent." />
     <MESSAGE value="Changed logback.xml" />
     <MESSAGE value="Added the HealthCheckServlet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the HealthCheckServlet." />
+    <MESSAGE value="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
