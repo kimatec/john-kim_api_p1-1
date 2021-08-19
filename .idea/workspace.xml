@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="changed the name of the artifact in the POM folder">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/GetMongoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/util/GetMongoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Credentials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +51,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\punsm\revature-intellij-repos\john-kim_api_p1-1\src\main\resources" />
+      <recent name="C:\Users\punsm\revature-intellij-repos\john-kim_api_p1-1\src\main\webapp" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -143,7 +154,63 @@
       <option name="project" value="LOCAL" />
       <updated>1628894103971</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Bug fixing. Seeing if this compiles.">
+      <created>1629217135518</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629217135518</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent.">
+      <created>1629233159359</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1629233159359</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changed logback.xml">
+      <created>1629234430299</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629234430299</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added the HealthCheckServlet.">
+      <created>1629236144137</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1629236144137</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful.">
+      <created>1629247092769</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1629247092769</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added AuthServlet and gave it some body.">
+      <created>1629251306219</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1629251306219</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixed an error with the filestream of applicationProperties.">
+      <created>1629298253832</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1629298253832</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline.">
+      <created>1629328178744</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1629328178744</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +239,16 @@
     <MESSAGE value="Modified buildspec.yml" />
     <MESSAGE value="modified the url path" />
     <MESSAGE value="changed the name of the artifact in the POM folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the name of the artifact in the POM folder" />
+    <MESSAGE value="Bug fixing. Seeing if this compiles." />
+    <MESSAGE value="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent." />
+    <MESSAGE value="Changed logback.xml" />
+    <MESSAGE value="Added the HealthCheckServlet." />
+    <MESSAGE value="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful." />
+    <MESSAGE value="Added AuthServlet and gave it some body." />
+    <MESSAGE value="Fixed an error with the filesteam of applicationProperties." />
+    <MESSAGE value="Fixed an error with the filestream of applicationProperties." />
+    <MESSAGE value="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline." />
+    <option name="LAST_COMMIT_MESSAGE" value="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,11 +5,9 @@ import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.FileReader;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Properties;
 
@@ -24,20 +22,26 @@ public class GetMongoClient {
 
     // Initialization of variables
     private static final GetMongoClient connection = new GetMongoClient();
-    private final String ipAddress;
-    private final int port;
     private MongoClient mongoClient;
 
     // Static implementation of Logger to work with the getConnection() method.
     static Logger logger = LoggerFactory.getLogger(GetMongoClient.class);
 
-    private GetMongoClient() {
+    Properties appProperties = new Properties();
 
-        ipAddress = System.getProperty("ipAddress");
-        port = Integer.parseInt(System.getProperty("port"));
-        String dbName = System.getProperty("dbName");
-        String username = System.getProperty("username");
-        String password = System.getProperty("password");
+    private GetMongoClient() {
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        try {
+            appProperties.load(loader.getResourceAsStream("applicationProperties.properties"));
+        } catch(IOException ioe) {
+            System.out.println("File not found!");
+        }
+
+        String ipAddress = appProperties.getProperty("ipAddress");
+        int port = Integer.parseInt(appProperties.getProperty("port"));
+        String dbName = appProperties.getProperty("dbName");
+        String username = appProperties.getProperty("username");
+        char[] password = appProperties.getProperty("password").toCharArray();
 
         // Compile all of the data from the properties environment variables into a MongoClient called,
         // for simplicity, 'mongoClient'.
@@ -45,7 +49,7 @@ public class GetMongoClient {
             this.mongoClient = MongoClients.create(
                     MongoClientSettings.builder()
                             .applyToClusterSettings(builder -> builder.hosts(Collections.singletonList(new ServerAddress(ipAddress, port))))
-                            .credential(MongoCredential.createScramSha1Credential(username, dbName, password.toCharArray()))
+                            .credential(MongoCredential.createScramSha1Credential(username, dbName, password))
                             .build());
         } catch (Exception e) {
             logger.error(e.getMessage());

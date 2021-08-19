@@ -8,6 +8,9 @@ import com.mongodb.client.MongoClient;
 import com.revature.johnKimAPI.repositories.SchoolRepository;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.GetMongoClient;
+import com.revature.johnKimAPI.web.servlet.AuthServlet;
+import com.revature.johnKimAPI.web.servlet.HealthCheckServlet;
+import com.revature.johnKimAPI.web.servlet.TestServlet;
 import org.slf4j.LoggerFactory;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -26,12 +29,16 @@ public class ContextLoaderListener implements ServletContextListener {
         ValidationService userService = new ValidationService(userRepo);
 
         // TODO: Add all of your servlets to here!
+        TestServlet testServlet = new TestServlet();
+        HealthCheckServlet health = new HealthCheckServlet();
+        AuthServlet authServlet = new AuthServlet(userService, mapper);
 //        UserServlet userServlet = new UserServlet(userService, mapper);
-//        AuthServlet authServlet = new AuthServlet(userService, mapper);
-//
+
         ServletContext servletContext = sce.getServletContext();
+        servletContext.addServlet("TestServlet", testServlet).addMapping("/test");
+        servletContext.addServlet("HealthCheckServlet", health).addMapping("/health");
+        servletContext.addServlet("AuthServlet", authServlet).addMapping("/auth");
 //        servletContext.addServlet("UserServlet", userServlet).addMapping("/users/*");
-//        servletContext.addServlet("AuthServlet", authServlet).addMapping("/auth");
 
         configureLogback(servletContext);
     }
