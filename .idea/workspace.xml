@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Made the Authservlet return a cookie with a session and the Principal.">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Committing .gitignore to main project body." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +51,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\punsm\revature-intellij-repos\john-kim_api_p1-1" />
       <recent name="C:\Users\punsm\revature-intellij-repos\john-kim_api_p1-1\src\main\resources" />
       <recent name="C:\Users\punsm\revature-intellij-repos\john-kim_api_p1-1\src\main\webapp" />
     </key>
@@ -213,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629331217408</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Committing .gitignore to main project body.">
+      <created>1629415924405</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1629415924405</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Committing .gitignore to main project body.">
+      <created>1629416053073</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1629416053073</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,7 +265,8 @@
     <MESSAGE value="Fixed an error with the filestream of applicationProperties." />
     <MESSAGE value="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline." />
     <MESSAGE value="Made the Authservlet return a cookie with a session and the Principal." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the Authservlet return a cookie with a session and the Principal." />
+    <MESSAGE value="Committing .gitignore to main project body." />
+    <option name="LAST_COMMIT_MESSAGE" value="Committing .gitignore to main project body." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
