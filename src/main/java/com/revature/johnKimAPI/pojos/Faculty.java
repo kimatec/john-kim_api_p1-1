@@ -94,4 +94,16 @@ public class Faculty {
     public int hashCode() {
         return Objects.hash(teacherID, firstName, lastName, email, username, hashPass);
     }
+
+    @Override
+    public String toString() {
+        return "Faculty{" +
+                "teacherID='" + teacherID + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", hashPass=" + hashPass +
+                '}';
+    }
 }
