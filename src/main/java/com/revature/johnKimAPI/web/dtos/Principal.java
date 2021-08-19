@@ -1,5 +1,6 @@
 package com.revature.johnKimAPI.web.dtos;
 
+import com.revature.johnKimAPI.pojos.Course;
 import com.revature.johnKimAPI.pojos.Faculty;
 import com.revature.johnKimAPI.pojos.Student;
 
@@ -25,6 +26,11 @@ public class Principal {
     public Principal(Faculty faculty) {
         this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
+    }
+
+    public Principal(Course course){
+        this.id = course.getClassID();
+        this.username = course.getName();
     }
 
     public String getId() {
