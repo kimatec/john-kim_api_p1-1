@@ -7,6 +7,7 @@ import com.revature.johnKimAPI.pojos.Faculty;
 import com.revature.johnKimAPI.pojos.Student;
 import com.revature.johnKimAPI.repositories.SchoolRepository;
 import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
+import com.revature.johnKimAPI.web.dtos.Principal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -86,7 +87,7 @@ public class ValidationService {
                 this.authFac = authFac;
         }
 
-        public Student login(String username, int hashPass) {
+        public Principal login(String username, int hashPass) {
                 if (username == null || username.trim().equals("")) {
                         throw new InvalidRequestException("Invalid user credentials provided!");
                 }
@@ -94,8 +95,10 @@ public class ValidationService {
                 // This ensures that the session is marked 'valid'.
                 this.isValid = true;
 
-                this.authStudent = schoolRepo.findStudentByCredentials(username, hashPass);
-                return this.authStudent;
+                Student authStudent = schoolRepo.findStudentByCredentials(username, hashPass);
+                this.authStudent = authStudent;
+
+                return new Principal(authStudent);
         }
 
         // Sends Student data to the requested location

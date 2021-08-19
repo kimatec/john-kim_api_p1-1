@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Fixed an error with the filestream of applicationProperties.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Credentials.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Credentials.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629298253832</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline.">
+      <created>1629328178744</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1629328178744</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +247,8 @@
     <MESSAGE value="Added AuthServlet and gave it some body." />
     <MESSAGE value="Fixed an error with the filesteam of applicationProperties." />
     <MESSAGE value="Fixed an error with the filestream of applicationProperties." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed an error with the filestream of applicationProperties." />
+    <MESSAGE value="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline." />
+    <option name="LAST_COMMIT_MESSAGE" value="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
