@@ -110,13 +110,13 @@ public class ValidationService {
                 }
         }
 
-        public Faculty facLogin(String username, int hashPass) {
+        public Principal facLogin(String username, int hashPass) {
                 if (username == null || username.trim().equals("")) {
                         throw new InvalidRequestException("Invalid user credentials provided!");
                 }
 
                 this.authFac = schoolRepo.findFacultyByCredentials(username, hashPass);
-                return this.authFac;
+                return new Principal(authFac);
         }
 
         // Sends faculty user data to the requested location

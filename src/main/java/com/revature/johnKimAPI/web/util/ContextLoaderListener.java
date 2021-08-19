@@ -29,15 +29,15 @@ public class ContextLoaderListener implements ServletContextListener {
         ValidationService userService = new ValidationService(userRepo);
 
         // TODO: Add all of your servlets to here!
-        TestServlet testServlet = new TestServlet();
+        TestServlet testServlet = new TestServlet(userService, mapper);
         HealthCheckServlet health = new HealthCheckServlet();
         AuthServlet authServlet = new AuthServlet(userService, mapper);
 //        UserServlet userServlet = new UserServlet(userService, mapper);
 
         ServletContext servletContext = sce.getServletContext();
-        servletContext.addServlet("TestServlet", testServlet).addMapping("/test");
-        servletContext.addServlet("HealthCheckServlet", health).addMapping("/health");
-        servletContext.addServlet("AuthServlet", authServlet).addMapping("/auth");
+        servletContext.addServlet("TestServlet", testServlet).addMapping("/test/*");
+        servletContext.addServlet("HealthCheckServlet", health).addMapping("/health/*");
+        servletContext.addServlet("AuthServlet", authServlet).addMapping("/auth/*");
 //        servletContext.addServlet("UserServlet", userServlet).addMapping("/users/*");
 
         configureLogback(servletContext);
