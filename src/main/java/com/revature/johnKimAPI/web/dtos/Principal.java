@@ -19,12 +19,12 @@ public class Principal {
     }
 
     public Principal(Student student) {
-        this.id = student.getEmail();
+        this.id = student.getStudentID();
         this.username = student.getUsername();
     }
 
     public Principal(Faculty faculty) {
-        this.id = faculty.getLastName();
+        this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
     }
 

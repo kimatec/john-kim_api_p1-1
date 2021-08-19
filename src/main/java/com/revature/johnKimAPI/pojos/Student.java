@@ -84,7 +84,7 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return Objects.equals(studentID, student.studentID) && Objects.equals(firstName, student.firstName) && Objects.equals(lastName, student.lastName) && Objects.equals(email, student.email) && Objects.equals(username, student.username) && Objects.equals(hashPass, student.hashPass);
+        return hashPass == student.hashPass && Objects.equals(studentID, student.studentID) && Objects.equals(firstName, student.firstName) && Objects.equals(lastName, student.lastName) && Objects.equals(email, student.email) && Objects.equals(username, student.username);
     }
 
     @Override
@@ -94,12 +94,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "studentID=" + studentID +
+        return "Student{" +
+                "studentID='" + studentID + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
-                ", password='" + hashPass + '\'' +
+                ", hashPass=" + hashPass +
                 '}';
     }
 }
