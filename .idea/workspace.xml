@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Committing .gitignore to main project body." />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/FacServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/FacServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629416053073</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Test Push">
+      <created>1629416523563</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1629416523563</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,7 +259,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initialized the beginning basis of our API" />
     <MESSAGE value="Implemented a ContextLoaderListener" />
     <MESSAGE value="Committing three POJOs for the purposes of encapsulation" />
     <MESSAGE value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
@@ -266,7 +282,9 @@
     <MESSAGE value="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline." />
     <MESSAGE value="Made the Authservlet return a cookie with a session and the Principal." />
     <MESSAGE value="Committing .gitignore to main project body." />
-    <option name="LAST_COMMIT_MESSAGE" value="Committing .gitignore to main project body." />
+    <MESSAGE value="Test Push" />
+    <MESSAGE value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -141,11 +141,11 @@ public class ValidationService {
         public List<Course> getTeacherClasses() { return schoolRepo.findCourseByTeacher(this.authFac.getLastName()); }
 
         public void updateCourse(Course newCourse, String id) {
-                if (isCourseValid(newCourse)) {
+                if(isCourseValid(newCourse)) {
                         String teacher = this.authFac.getLastName();
                         schoolRepo.updateCourse(newCourse, id, teacher);
                 } else {
-                        throw new ResourcePersistenceException("Sorry, but that could not be persisted!");
+                        throw new ResourcePersistenceException("New course not valid!");
                 }
         }
 

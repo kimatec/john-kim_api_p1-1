@@ -47,7 +47,7 @@ public class FacServlet extends HttpServlet {
             resp.getWriter().write(payload);
 
             HttpSession session = req.getSession();
-            session.setAttribute("faculty", validFac);
+            session.setAttribute("auth-user", validFac);
 
         } catch (InvalidRequestException | MismatchedInputException e) {
             e.printStackTrace();
