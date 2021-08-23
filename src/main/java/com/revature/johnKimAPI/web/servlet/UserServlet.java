@@ -57,7 +57,6 @@ public class UserServlet extends HttpServlet { // TODO: Make the user servlet wo
         try {
 
             if (userIdParam == null) {
-                // TODO: make a findALL function for the UserServlet!
 
 //                    List<Student> users = userService.findAll();
 //                    respWriter.write(mapper.writeValueAsString(users));

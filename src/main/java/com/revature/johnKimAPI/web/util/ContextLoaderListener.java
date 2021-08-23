@@ -9,6 +9,7 @@ import com.revature.johnKimAPI.repositories.SchoolRepository;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.GetMongoClient;
 import com.revature.johnKimAPI.web.servlet.AuthServlet;
+import com.revature.johnKimAPI.web.servlet.CourseServlet;
 import com.revature.johnKimAPI.web.servlet.HealthCheckServlet;
 import com.revature.johnKimAPI.web.servlet.FacServlet;
 import org.slf4j.LoggerFactory;
@@ -32,12 +33,14 @@ public class ContextLoaderListener implements ServletContextListener {
         FacServlet facServlet = new FacServlet(userService, mapper);
         HealthCheckServlet health = new HealthCheckServlet();
         AuthServlet authServlet = new AuthServlet(userService, mapper);
+        CourseServlet courseServlet = new CourseServlet(userService, mapper);
 //        UserServlet userServlet = new UserServlet(userService, mapper);
 
         ServletContext servletContext = sce.getServletContext();
         servletContext.addServlet("FacServlet", facServlet).addMapping("/facLogin/*");
         servletContext.addServlet("HealthCheckServlet", health).addMapping("/health/*");
         servletContext.addServlet("AuthServlet", authServlet).addMapping("/auth/*");
+        servletContext.addServlet("CourseServlet", courseServlet).addMapping("/course/*");
 //        servletContext.addServlet("UserServlet", userServlet).addMapping("/users/*");
 
         configureLogback(servletContext);

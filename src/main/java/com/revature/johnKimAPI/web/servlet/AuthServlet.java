@@ -8,7 +8,6 @@ import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import com.revature.johnKimAPI.web.dtos.Credentials;
 import com.revature.johnKimAPI.web.dtos.ErrorResponse;
 import com.revature.johnKimAPI.web.dtos.Principal;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -44,7 +43,7 @@ public class AuthServlet extends HttpServlet {
             resp.getWriter().write(payload);
 
             HttpSession session = req.getSession();
-            session.setAttribute("auth-student", validUser);
+            session.setAttribute("auth-user", validUser);
 
         } catch (InvalidRequestException | MismatchedInputException e) {
             e.printStackTrace();

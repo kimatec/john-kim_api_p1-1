@@ -10,6 +10,7 @@ public class Principal {
 
     private String id;
     private String username;
+    private String lastName;
 
     public Principal() { super(); }
 
@@ -26,11 +27,20 @@ public class Principal {
     public Principal(Faculty faculty) {
         this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
+        this.lastName = faculty.getLastName();
     }
 
     public Principal(Course course){
         this.id = course.getClassID();
         this.username = course.getName();
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getId() {
@@ -54,12 +64,12 @@ public class Principal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Principal principal = (Principal) o;
-        return Objects.equals(id, principal.id) && Objects.equals(username, principal.username);
+        return Objects.equals(id, principal.id) && Objects.equals(username, principal.username) && Objects.equals(lastName, principal.lastName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username);
+        return Objects.hash(id, username, lastName);
     }
 
     @Override
@@ -67,6 +77,7 @@ public class Principal {
         return "Principal{" +
                 "id='" + id + '\'' +
                 ", username='" + username + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
