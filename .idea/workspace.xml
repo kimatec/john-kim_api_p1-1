@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Sanity check push">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Sanity check push x2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
     </list>
@@ -271,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629731965202</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Sanity check push x2">
+      <created>1629735128185</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1629735128185</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,7 +294,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Made an index page and configured logback.xml" />
     <MESSAGE value="Removed a depreciated relic, log4j2.xml." />
     <MESSAGE value="QOL changes" />
     <MESSAGE value="Added TestServlet for testing." />
@@ -312,7 +318,8 @@
     <MESSAGE value="Removed the second 'Access-Control-Allow-Origin' header from the filter." />
     <MESSAGE value="Pushing singular access-control header to the database for solely localhost testing." />
     <MESSAGE value="Sanity check push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sanity check push" />
+    <MESSAGE value="Sanity check push x2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sanity check push x2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
