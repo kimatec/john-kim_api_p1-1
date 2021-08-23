@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP.">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Repairing the Cors Filter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
     </list>
@@ -243,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629586137275</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Repairing the Cors Filter">
+      <created>1629730495874</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1629730495874</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,7 +266,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented a ContextLoaderListener" />
     <MESSAGE value="Committing three POJOs for the purposes of encapsulation" />
     <MESSAGE value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
     <MESSAGE value="Added a skeleton to the User Servlet" />
@@ -284,7 +290,8 @@
     <MESSAGE value="Committing .gitignore to main project body." />
     <MESSAGE value="Test Push" />
     <MESSAGE value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
+    <MESSAGE value="Repairing the Cors Filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repairing the Cors Filter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
