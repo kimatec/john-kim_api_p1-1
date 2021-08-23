@@ -20,4 +20,5 @@ public class CorsFilter extends HttpFilter {
         resp.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         chain.doFilter(req, resp);
     }
+
 }
