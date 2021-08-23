@@ -11,6 +11,7 @@ import java.io.IOException;
 @WebFilter("/*")
 public class CorsFilter extends HttpFilter {
 
+    // This is weird
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse resp, FilterChain chain) throws IOException, ServletException {
         req.setAttribute("filtered", true);
