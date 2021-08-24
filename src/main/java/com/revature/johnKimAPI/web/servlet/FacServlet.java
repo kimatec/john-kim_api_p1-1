@@ -2,16 +2,13 @@ package com.revature.johnKimAPI.web.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
-import com.revature.johnKimAPI.pojos.Course;
-import com.revature.johnKimAPI.pojos.Faculty;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.exceptions.InvalidRequestException;
 import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import com.revature.johnKimAPI.web.dtos.Credentials;
 import com.revature.johnKimAPI.web.dtos.ErrorResponse;
 import com.revature.johnKimAPI.web.dtos.Principal;
-
-import javax.servlet.ServletException;
+import sun.misc.Request;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -46,6 +43,7 @@ public class FacServlet extends HttpServlet {
             String payload = mapper.writeValueAsString(validFac);
             resp.getWriter().write(payload);
 
+            resp.setHeader("Set-Cookie:", "<cookie-name>=<cookie-value>; SameSite=None; Secure");
             HttpSession session = req.getSession();
             session.setAttribute("auth-user", validFac);
 
