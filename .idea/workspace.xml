@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Removing a slash from the current cors filter ACAO header.">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Switching CORS filter for testing.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629840686650</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Switching CORS filter for testing.">
+      <created>1629841566235</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1629841566235</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,7 +336,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added buildspec.yml" />
     <MESSAGE value="Modified buildspec.yml" />
     <MESSAGE value="modified the url path" />
     <MESSAGE value="changed the name of the artifact in the POM folder" />
@@ -354,7 +360,8 @@
     <MESSAGE value="Removed the pathing to be more plain/reliable." />
     <MESSAGE value="Sanity Push x3" />
     <MESSAGE value="Removing a slash from the current cors filter ACAO header." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing a slash from the current cors filter ACAO header." />
+    <MESSAGE value="Switching CORS filter for testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Switching CORS filter for testing." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
