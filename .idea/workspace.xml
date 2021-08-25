@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added the HealthCheckServlet.">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/StudentPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -13,6 +14,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/revature/johnKimAPI/services/ValidationServiceTestSuite.java" beforeDir="false" />
+=======
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Sanity check push x2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
+>>>>>>> a3e49b117487a39e74817e8872316b614cc0bb6f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +248,49 @@
       <option name="project" value="LOCAL" />
       <updated>1629416523563</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP.">
+      <created>1629586137274</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1629586137275</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Repairing the Cors Filter">
+      <created>1629730495874</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1629730495874</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Removed the second 'Access-Control-Allow-Origin' header from the filter.">
+      <created>1629730855512</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1629730855512</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Pushing singular access-control header to the database for solely localhost testing.">
+      <created>1629731031594</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1629731031594</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Sanity check push">
+      <created>1629731965202</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1629731965202</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Sanity check push x2">
+      <created>1629735128185</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1629735128185</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,11 +306,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented a ContextLoaderListener" />
-    <MESSAGE value="Committing three POJOs for the purposes of encapsulation" />
-    <MESSAGE value="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable." />
-    <MESSAGE value="Added a skeleton to the User Servlet" />
-    <MESSAGE value="Made an index page and configured logback.xml" />
     <MESSAGE value="Removed a depreciated relic, log4j2.xml." />
     <MESSAGE value="QOL changes" />
     <MESSAGE value="Added TestServlet for testing." />
@@ -283,7 +326,12 @@
     <MESSAGE value="Committing .gitignore to main project body." />
     <MESSAGE value="Test Push" />
     <MESSAGE value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
+    <MESSAGE value="Repairing the Cors Filter" />
+    <MESSAGE value="Removed the second 'Access-Control-Allow-Origin' header from the filter." />
+    <MESSAGE value="Pushing singular access-control header to the database for solely localhost testing." />
+    <MESSAGE value="Sanity check push" />
+    <MESSAGE value="Sanity check push x2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sanity check push x2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
