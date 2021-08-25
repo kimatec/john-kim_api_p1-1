@@ -8,6 +8,7 @@ import com.mongodb.client.MongoClient;
 import com.revature.johnKimAPI.repositories.SchoolRepository;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.GetMongoClient;
+
 import com.revature.johnKimAPI.web.filters.AuthFilter;
 import com.revature.johnKimAPI.web.servlet.AuthServlet;
 import com.revature.johnKimAPI.web.servlet.CourseServlet;
@@ -41,7 +42,7 @@ public class ContextLoaderListener implements ServletContextListener {
         HealthCheckServlet health = new HealthCheckServlet();
         AuthServlet authServlet = new AuthServlet(userService, mapper, generator);
         CourseServlet courseServlet = new CourseServlet(userService, mapper);
-//        UserServlet userServlet = new UserServlet(userService, mapper);
+        RegistrationServlet registrationServlet = new RegistrationServlet(userService, mapper);
 
         AuthFilter authFilter = new AuthFilter(jwtConfig);
 
@@ -51,7 +52,7 @@ public class ContextLoaderListener implements ServletContextListener {
         servletContext.addServlet("HealthCheckServlet", health).addMapping("/health/*");
         servletContext.addServlet("AuthServlet", authServlet).addMapping("/auth/*");
         servletContext.addServlet("CourseServlet", courseServlet).addMapping("/course/*");
-//        servletContext.addServlet("UserServlet", userServlet).addMapping("/users/*");
+        servletContext.addServlet("RegistrationServlet", registrationServlet).addMapping("/register/*");
 
         configureLogback(servletContext);
     }

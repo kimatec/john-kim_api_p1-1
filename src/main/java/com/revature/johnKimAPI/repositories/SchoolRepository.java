@@ -54,15 +54,24 @@ public class SchoolRepository {
 
         try {
             MongoDatabase database = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
-            MongoCollection<Student> collection = database.getCollection("StudentCredentials", Student.class);
+            MongoCollection<Document> collection = database.getCollection("StudentCredentials");
+
+            Document newUserDoc = new Document ("firstName", newStudent.getFirstName())
+                                        .append("lastName", newStudent.getLastName())
+                                        .append("email", newStudent.getEmail())
+                                        .append("username", newStudent.getUsername())
+                                        .append("hashPass", newStudent.getHashPass());
 
             // this inserts the instance into the "StudentCredentials" database.
-            collection.insertOne(newStudent);
+            collection.insertOne(newUserDoc);
+
+            newStudent.setStudentID(newUserDoc.get("_id").toString());
+            System.out.println(newStudent);
 
         } catch (Exception e) {
             logger.error("Threw an exception at SchoolRepository::save(), full StackTrace follows: " + e);
         }
-        return null;
+        return newStudent;
     }
 
     public void enroll(Enrolled course) {
