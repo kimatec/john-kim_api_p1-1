@@ -19,6 +19,7 @@ public class Student {
     private String email;
     private String username;
     private int hashPass;
+    private final boolean role = false;
 
     // public empty constructor is needed to retrieve the POJO
     public Student(){}
@@ -29,6 +30,10 @@ public class Student {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public boolean isRole() {
+        return role;
     }
 
     public String getStudentID() {

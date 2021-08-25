@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Attempting to set the header of Set-Cookie to be samesite=none">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/security/JwtConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/security/TokenGenerator.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Switching from Cookie session authentication to JWT authentication.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Faculty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/FacServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/FacServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationProperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationProperties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/UserServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629846123475</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Switching from Cookie session authentication to JWT authentication.">
+      <created>1629910003121</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1629910003121</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -358,7 +362,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed the name of the artifact in the POM folder" />
     <MESSAGE value="Bug fixing. Seeing if this compiles." />
     <MESSAGE value="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent." />
     <MESSAGE value="Changed logback.xml" />
@@ -383,7 +386,8 @@
     <MESSAGE value="Switching CORS filter for testing." />
     <MESSAGE value="Added context.xml to see if this changes anything." />
     <MESSAGE value="Attempting to set the header of Set-Cookie to be samesite=none" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempting to set the header of Set-Cookie to be samesite=none" />
+    <MESSAGE value="Switching from Cookie session authentication to JWT authentication." />
+    <option name="LAST_COMMIT_MESSAGE" value="Switching from Cookie session authentication to JWT authentication." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

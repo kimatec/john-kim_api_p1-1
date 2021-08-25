@@ -48,7 +48,7 @@ public class AuthFilter extends HttpFilter {
 
             Claims jwtClaims = Jwts.parser()
                     .setSigningKey(jwtConfig.getSigningKey())
-                    .parseClaimsJwt(token)
+                    .parseClaimsJws(token)
                     .getBody();
             req.setAttribute("principal", new Principal(jwtClaims));
             System.out.println("Principal added as attribute to request!");
