@@ -38,14 +38,11 @@ public class CourseServlet extends HttpServlet {
         resp.setContentType("application/json");
 
         // Get the session from the request if it exists (This does not create a new session.)
-        HttpSession session = req.getSession(false);
-
-        // If the session is not null, then grab the auth-user attribute from the HttpSession
-        Principal requestingUser = (session == null) ? null : (Principal) session.getAttribute("auth-user");
+        Principal requestingUser = (Principal)req.getAttribute("principal");
 
         // Filter the query to see if the Session is Authorized to make this kind of request.
         if (requestingUser == null) {
-            resp.setStatus(400);
+            resp.setStatus(401);
             ErrorResponse errResp = new ErrorResponse(401, "You are not currently logged in. Please log in!");
             respWriter.write(mapper.writeValueAsString(errResp));
             return;
@@ -63,7 +60,7 @@ public class CourseServlet extends HttpServlet {
             } else if(!(courseID == null)) {
                 Course foundCourse = authService.getCourseByID(courseID);
                 respWriter.write(mapper.writeValueAsString(foundCourse));
-            } else if (requestingUser.getLastName() == null) {
+            } else if (requestingUser.isRole()) {
                 resp.setStatus(403);
                 ErrorResponse errResp = new ErrorResponse(403, "You are not currently signed in as a Faculty member. Please make a valid query.");
                 respWriter.write(mapper.writeValueAsString(errResp));
@@ -100,7 +97,7 @@ public class CourseServlet extends HttpServlet {
             ErrorResponse errResp = new ErrorResponse(401, "You are not currently logged in. Please log in!");
             respWriter.write(mapper.writeValueAsString(errResp));
             return;
-        } else if (requestingUser.getLastName() == null) {
+        } else if (requestingUser.isRole()) {
             resp.setStatus(403);
             ErrorResponse errResp = new ErrorResponse(403, "You are not currently signed in as a Faculty member.");
             respWriter.write(mapper.writeValueAsString(errResp));

@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added the HealthCheckServlet.">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/StudentPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -14,11 +13,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Credentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/revature/johnKimAPI/services/ValidationServiceTestSuite.java" beforeDir="false" />
-=======
+
     <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Sanity check push x2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
->>>>>>> a3e49b117487a39e74817e8872316b614cc0bb6f
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Sanity push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/FacServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/FacServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/ContextLoaderListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="devOps" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -290,7 +293,84 @@
       <option name="project" value="LOCAL" />
       <updated>1629735128185</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Removed the pathing to be more plain/reliable.">
+      <created>1629839108898</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1629839108898</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Removed the pathing to be more plain/reliable.">
+      <created>1629839436609</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1629839436609</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Sanity Push x3">
+      <created>1629839988392</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1629839988392</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Sanity Push x3">
+      <created>1629840325970</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1629840325970</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Removing a slash from the current cors filter ACAO header.">
+      <created>1629840686649</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1629840686650</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Switching CORS filter for testing.">
+      <created>1629841566235</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1629841566235</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added context.xml to see if this changes anything.">
+      <created>1629842951373</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1629842951373</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Attempting to set the header of Set-Cookie to be samesite=none">
+      <created>1629846123475</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1629846123475</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Switching from Cookie session authentication to JWT authentication.">
+      <created>1629910003121</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1629910003121</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Verifies a teacher's identity with a new 'isRole' field.">
+      <created>1629919227273</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1629919227273</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Sanity push">
+      <created>1629920128047</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1629920128047</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,15 +386,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed a depreciated relic, log4j2.xml." />
-    <MESSAGE value="QOL changes" />
-    <MESSAGE value="Added TestServlet for testing." />
-    <MESSAGE value="Added buildspec.yml" />
-    <MESSAGE value="Modified buildspec.yml" />
-    <MESSAGE value="modified the url path" />
-    <MESSAGE value="changed the name of the artifact in the POM folder" />
-    <MESSAGE value="Bug fixing. Seeing if this compiles." />
-    <MESSAGE value="Removed the call to CORS filter, altered the buildspec.yml to make the pipeline more consistent." />
     <MESSAGE value="Changed logback.xml" />
     <MESSAGE value="Added the HealthCheckServlet." />
     <MESSAGE value="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful." />
@@ -331,7 +402,16 @@
     <MESSAGE value="Pushing singular access-control header to the database for solely localhost testing." />
     <MESSAGE value="Sanity check push" />
     <MESSAGE value="Sanity check push x2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sanity check push x2" />
+    <MESSAGE value="Removed the pathing to be more plain/reliable." />
+    <MESSAGE value="Sanity Push x3" />
+    <MESSAGE value="Removing a slash from the current cors filter ACAO header." />
+    <MESSAGE value="Switching CORS filter for testing." />
+    <MESSAGE value="Added context.xml to see if this changes anything." />
+    <MESSAGE value="Attempting to set the header of Set-Cookie to be samesite=none" />
+    <MESSAGE value="Switching from Cookie session authentication to JWT authentication." />
+    <MESSAGE value="Verifies a teacher's identity with a new 'isRole' field." />
+    <MESSAGE value="Sanity push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sanity push" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

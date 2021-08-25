@@ -3,6 +3,7 @@ package com.revature.johnKimAPI.web.dtos;
 import com.revature.johnKimAPI.pojos.Course;
 import com.revature.johnKimAPI.pojos.Faculty;
 import com.revature.johnKimAPI.pojos.Student;
+import io.jsonwebtoken.Claims;
 
 import java.util.Objects;
 
@@ -10,7 +11,7 @@ public class Principal {
 
     private String id;
     private String username;
-    private String lastName;
+    private boolean role;
 
     public Principal() { super(); }
 
@@ -22,12 +23,18 @@ public class Principal {
     public Principal(Student student) {
         this.id = student.getStudentID();
         this.username = student.getUsername();
+        this.role = student.isRole();
     }
 
     public Principal(Faculty faculty) {
         this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
-        this.lastName = faculty.getLastName();
+        this.role = faculty.isRole();
+    }
+
+    public Principal(Claims jwtClaims) {
+        this.id = jwtClaims.getId();
+        this.username = jwtClaims.getSubject();
     }
 
     public Principal(Course course){
@@ -35,12 +42,8 @@ public class Principal {
         this.username = course.getName();
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public boolean isRole() {
+        return role;
     }
 
     public String getId() {
@@ -64,12 +67,12 @@ public class Principal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Principal principal = (Principal) o;
-        return Objects.equals(id, principal.id) && Objects.equals(username, principal.username) && Objects.equals(lastName, principal.lastName);
+        return role == principal.role && Objects.equals(id, principal.id) && Objects.equals(username, principal.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, lastName);
+        return Objects.hash(id, username, role);
     }
 
     @Override
@@ -77,7 +80,7 @@ public class Principal {
         return "Principal{" +
                 "id='" + id + '\'' +
                 ", username='" + username + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", isFaculty=" + role +
                 '}';
     }
 }
