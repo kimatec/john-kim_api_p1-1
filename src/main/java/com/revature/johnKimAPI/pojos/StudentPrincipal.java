@@ -1,45 +1,25 @@
 package com.revature.johnKimAPI.pojos;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-
 import java.util.Objects;
 
-/**
- * This POJO is necessary because it stores user data, typically compiled through the 'StudentRegisterPage' Page.
- * This data is validated within the service layer then passed to the SchoolRepository for injection into the
- * 'StudentCredentials' database in MongoDB. Unused getters and setters are left in case of future
- * expansion on this program.
- */
-
-@JsonIgnoreProperties (ignoreUnknown = true)
-public class Student {
+public class StudentPrincipal {
 
     private String studentID;
     private String firstName;
     private String lastName;
     private String email;
     private String username;
-    private int hashPass;
+    private String hashPass;
 
     // public empty constructor is needed to retrieve the POJO
-    public Student(){}
+    public StudentPrincipal(){}
 
-    public Student(String username, int password, String firstName, String lastName, String email) {
+    public StudentPrincipal(String username, String password, String firstName, String lastName, String email) {
         this.username = username;
         this.hashPass = password;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
-    }
-
-    public Student(StudentPrincipal principal) {
-        this.username = principal.getUsername();
-        this.hashPass = principal.getPassword().hashCode();
-        this.firstName = principal.getFirstName();
-        this.lastName = principal.getLastName();
-        this.email = principal.getEmail();
     }
 
     public String getStudentID() {
@@ -82,20 +62,20 @@ public class Student {
         this.username = username;
     }
 
-    public int getHashPass() {
+    public String getPassword() {
         return hashPass;
     }
 
-    public void setHashPass(int hashPass) {
-        this.hashPass = hashPass;
+    public void setPassword(String password) {
+        this.hashPass = password;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return hashPass == student.hashPass && Objects.equals(studentID, student.studentID) && Objects.equals(firstName, student.firstName) && Objects.equals(lastName, student.lastName) && Objects.equals(email, student.email) && Objects.equals(username, student.username);
+        StudentPrincipal that = (StudentPrincipal) o;
+        return Objects.equals(studentID, that.studentID) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(email, that.email) && Objects.equals(username, that.username) && Objects.equals(hashPass, that.hashPass);
     }
 
     @Override
@@ -105,13 +85,13 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "StudentPrincipal{" +
                 "studentID='" + studentID + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
-                ", hashPass=" + hashPass +
+                ", password='" + hashPass + '\'' +
                 '}';
     }
 }

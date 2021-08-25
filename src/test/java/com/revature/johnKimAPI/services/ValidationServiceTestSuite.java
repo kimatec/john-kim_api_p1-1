@@ -35,7 +35,7 @@ public class ValidationServiceTestSuite {
     public void afterEachTest() {
         sut = null;
     }
-
+/*
     @Test
     public void isUserValid_returnTrueForGivenValidUser() {
 
@@ -48,7 +48,7 @@ public class ValidationServiceTestSuite {
         // Assert
         Assert.assertTrue("Expected user to be considered valid!", actualResult);
     }
-
+/*
     @Test
     public void isUserValid_returnsFalseForGivenBlankValues() {
 
@@ -69,7 +69,7 @@ public class ValidationServiceTestSuite {
 
     }
 
-    @Test
+/*    @Test
     public void register_returnsTrueWhenGivenValidUser() {
 
         // Arrange
@@ -100,7 +100,7 @@ public class ValidationServiceTestSuite {
             verify(mockSchoolRepo, times(0)).save(any());
         }
     }
-
+*/
     @Test
     public void returnsTrue_GivenValidCourseInput() {
 
