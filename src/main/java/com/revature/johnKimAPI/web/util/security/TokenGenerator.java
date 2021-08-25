@@ -5,6 +5,11 @@ import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import java.util.Date;
 
+/**
+ * TokenGenerator is used to generate JSON Web Tokens, useful for the validation of users and ensuring that
+ * they never stay valuable for long due to time limitations.
+ */
+
 public class TokenGenerator {
 
     private final JwtConfig jwtConfig;
