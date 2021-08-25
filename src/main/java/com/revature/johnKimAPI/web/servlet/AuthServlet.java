@@ -8,6 +8,10 @@ import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import com.revature.johnKimAPI.web.dtos.Credentials;
 import com.revature.johnKimAPI.web.dtos.ErrorResponse;
 import com.revature.johnKimAPI.web.dtos.Principal;
+import com.revature.johnKimAPI.web.util.security.TokenGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,16 +23,20 @@ public class AuthServlet extends HttpServlet {
 
     private final ValidationService userService;
     private final ObjectMapper mapper;
+    private final TokenGenerator generator;
 
-    public AuthServlet(ValidationService userService, ObjectMapper mapper) {
+    public AuthServlet(ValidationService userService, ObjectMapper mapper, TokenGenerator generator) {
         this.userService = userService;
         this.mapper = mapper;
+        this.generator = generator;
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PrintWriter respWriter = resp.getWriter();
         resp.setContentType("application/json");
+
+        Logger logger = LoggerFactory.getLogger(AuthServlet.class);
 
         try {
 
@@ -42,8 +50,10 @@ public class AuthServlet extends HttpServlet {
             String payload = mapper.writeValueAsString(validUser);
             resp.getWriter().write(payload);
 
-            HttpSession session = req.getSession();
-            session.setAttribute("auth-user", validUser);
+            String token = generator.generateToken(validUser);
+            resp.setHeader(generator.getJwtConfig().getHeader(), token);
+
+            logger.info("JWT Successfully created for Student!");
 
         } catch (InvalidRequestException | MismatchedInputException e) {
             e.printStackTrace();

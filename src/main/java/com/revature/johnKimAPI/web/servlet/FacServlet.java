@@ -54,7 +54,7 @@ public class FacServlet extends HttpServlet {
             String token = generator.generateToken(validFac);
             resp.setHeader(generator.getJwtConfig().getHeader(), token);
 
-            logger.info("JWT Successfully Created!");
+            logger.info("JWT Successfully created for Faculty!");
 
         } catch (InvalidRequestException | MismatchedInputException e) {
             e.printStackTrace();
