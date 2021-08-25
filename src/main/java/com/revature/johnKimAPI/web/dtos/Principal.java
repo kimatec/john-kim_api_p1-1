@@ -3,6 +3,7 @@ package com.revature.johnKimAPI.web.dtos;
 import com.revature.johnKimAPI.pojos.Course;
 import com.revature.johnKimAPI.pojos.Faculty;
 import com.revature.johnKimAPI.pojos.Student;
+import io.jsonwebtoken.Claims;
 
 import java.util.Objects;
 
@@ -28,6 +29,11 @@ public class Principal {
         this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
         this.lastName = faculty.getLastName();
+    }
+
+    public Principal(Claims jwtClaims) {
+        this.id = jwtClaims.getId();
+        this.username = jwtClaims.getSubject();
     }
 
     public Principal(Course course){
