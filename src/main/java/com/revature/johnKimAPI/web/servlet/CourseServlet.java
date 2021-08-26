@@ -86,10 +86,7 @@ public class CourseServlet extends HttpServlet {
         resp.setContentType("application/json");
 
         // Get the session from the request if it exists (This does not create a new session.)
-        HttpSession session = req.getSession(false);
-
-        // If the session is not null, then grab the auth-user attribute from the HttpSession
-        Principal requestingUser = (session == null) ? null : (Principal) session.getAttribute("auth-user");
+        Principal requestingUser = (Principal)req.getAttribute("principal");
 
         // Filter the query to see if the Session is Authorized to make this kind of request.
         if (requestingUser == null) {
@@ -97,7 +94,7 @@ public class CourseServlet extends HttpServlet {
             ErrorResponse errResp = new ErrorResponse(401, "You are not currently logged in. Please log in!");
             respWriter.write(mapper.writeValueAsString(errResp));
             return;
-        } else if (requestingUser.isRole()) {
+        } else if (!requestingUser.isRole()) {
             resp.setStatus(403);
             ErrorResponse errResp = new ErrorResponse(403, "You are not currently signed in as a Faculty member.");
             respWriter.write(mapper.writeValueAsString(errResp));
@@ -111,24 +108,27 @@ public class CourseServlet extends HttpServlet {
 
             if(!(delete == null)) {
                 // Notify the user of your goal.
-                resp.getWriter().write("Attempting to delete course " + course.getClassID() + "...");
+                System.out.println("Attempting to delete course " + course.getClassID() + "...");
                 authService.deleteCourse(course.getClassID());
 
                 // Send them back a 200 to denote success.
-                resp.getWriter().write("Course successfully deleted!");
+                ErrorResponse infoResp = new ErrorResponse(200, "Course successfully deleted!");
+                resp.getWriter().write(mapper.writeValueAsString(infoResp));
             } else if(!(update == null)) {
                 // Notify the user of your goal.
-                resp.getWriter().write("Attempting to update course " + course.getClassID() + "...");
+                System.out.println("Attempting to update course " + course.getClassID() + "...");
                 authService.updateCourse(course, course.getClassID());
 
                 // Send them back a 200 to denote success.
-                resp.getWriter().write("Course successfully updated!");
+                ErrorResponse infoResp = new ErrorResponse(201, "Course successfully updated!");
+                resp.getWriter().write(mapper.writeValueAsString(infoResp));
             } else {
                 // Attempt to persist the new course to the Database.
                 authService.createCourse(course);
 
                 // Send them back a 200 to denote success.
-                resp.getWriter().write("Course successfully added!");
+                ErrorResponse infoResp = new ErrorResponse(201, "Course successfully added!");
+                resp.getWriter().write(mapper.writeValueAsString(infoResp));
             }
         } catch(InvalidRequestException | MismatchedInputException e) {
             e.printStackTrace();
