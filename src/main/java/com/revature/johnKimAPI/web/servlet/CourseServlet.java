@@ -65,7 +65,7 @@ public class CourseServlet extends HttpServlet {
                 ErrorResponse errResp = new ErrorResponse(403, "You are not currently signed in as a Faculty member. Please make a valid query.");
                 respWriter.write(mapper.writeValueAsString(errResp));
             } else {
-                List<Course> courses = authService.getTeacherClasses(requestingUser.getLastName());
+                List<Course> courses = authService.getTeacherClasses();
                 respWriter.write(mapper.writeValueAsString(courses));
             }
         } catch (ResourceNotFoundException rnfe) {
