@@ -17,6 +17,9 @@ public class Course {
     boolean isOpen;
 
     // Empty, no args constructor necessary for Mongo to grab the course object.
+    public Course() {}
+
+    // This is where Kim destroyed the empty, no args constructor that was necessary to grab the course object.
     public Course(Enrolled enrolled) {}
 
     public Course(String name, String id, String desc, String teacher, boolean isOpen) {

@@ -33,6 +33,8 @@ public class Principal {
     public Principal(Claims jwtClaims) {
         this.id = jwtClaims.getId();
         this.username = jwtClaims.getSubject();
+        this.lastName = jwtClaims.get("lastName", String.class);
+        this.role = jwtClaims.get("role", Boolean.class);
     }
 
     public Principal(Course course){

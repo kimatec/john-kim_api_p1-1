@@ -60,12 +60,12 @@ public class CourseServlet extends HttpServlet {
             } else if(!(courseID == null)) {
                 Course foundCourse = authService.getCourseByID(courseID);
                 respWriter.write(mapper.writeValueAsString(foundCourse));
-            } else if (requestingUser.isRole()) {
+            } else if (!requestingUser.isRole()) {
                 resp.setStatus(403);
                 ErrorResponse errResp = new ErrorResponse(403, "You are not currently signed in as a Faculty member. Please make a valid query.");
                 respWriter.write(mapper.writeValueAsString(errResp));
             } else {
-                List<Course> courses = authService.getTeacherClasses();
+                List<Course> courses = authService.getTeacherClasses(requestingUser.getLastName());
                 respWriter.write(mapper.writeValueAsString(courses));
             }
         } catch (ResourceNotFoundException rnfe) {

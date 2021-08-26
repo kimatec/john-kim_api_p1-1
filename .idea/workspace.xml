@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Removed the lastName field from the return principal. Will this really fix everything?">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Adding lastName field back and allowing it to be granted to students as 'null'.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/security/TokenGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/util/security/TokenGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -383,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629991114166</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Adding lastName field back and allowing it to be granted to students as 'null'.">
+      <created>1629992295125</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1629992295125</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,7 +410,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed an error with the filesteam of applicationProperties." />
     <MESSAGE value="Fixed an error with the filestream of applicationProperties." />
     <MESSAGE value="Allowed the servlet to check in users. All that is needed now is to establish sessions with those users. Pushing this for testing purposes on the API pipeline." />
     <MESSAGE value="Made the Authservlet return a cookie with a session and the Principal." />
@@ -424,7 +434,8 @@
     <MESSAGE value="Replaced the authfac object in the API with a call to the lastname of the requesting user." />
     <MESSAGE value="Decided against using the lastName field provided by the requestingUser for locating courses." />
     <MESSAGE value="Removed the lastName field from the return principal. Will this really fix everything?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the lastName field from the return principal. Will this really fix everything?" />
+    <MESSAGE value="Adding lastName field back and allowing it to be granted to students as 'null'." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding lastName field back and allowing it to be granted to students as 'null'." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
