@@ -33,7 +33,7 @@ public class ValidationService {
         private Faculty authFac;
 
 
-        public void register(Student newStudent) {
+        public Student register(Student newStudent) {
 
                 if (!isUserValid(newStudent)) {
                         throw new InvalidRequestException("Invalid user data provided!");
@@ -42,6 +42,7 @@ public class ValidationService {
                 schoolRepo.save(newStudent);
                 logger.info("New Student registered!" + newStudent);
 
+                return newStudent;
         }
 
         // This will attempt to persist a created course to the courses database.
@@ -64,12 +65,13 @@ public class ValidationService {
 
         // This enrolls a student into a course, grafting their username to it,
         // and placing it within the separate 'enrolled' database.
-        public void enroll(Course selectedCourse) {
+        public Course enroll(Course selectedCourse) {
                 if (isCourseValid(selectedCourse)) {
                         Enrolled enrollIn = new Enrolled(this.authStudent.getUsername(), selectedCourse.getName(),
                                 selectedCourse.getClassID(), selectedCourse.getDesc(), selectedCourse.getTeacher());
                         schoolRepo.enroll(enrollIn);
                 }
+                return selectedCourse;
         }
 
         // Wipes user data and sets the session to an invalid one.

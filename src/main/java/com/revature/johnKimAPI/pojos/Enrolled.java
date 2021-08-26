@@ -17,7 +17,7 @@ public class Enrolled {
     boolean isOpen;
 
     // Empty, no-args constructor is necessary for the POJO to be grabbed my Mongo.
-    public Enrolled() {}
+    public Enrolled(Enrolled enrolled) {}
 
     public Enrolled(String username, String name, String id, String desc, String teacher) {
         this.username = username;

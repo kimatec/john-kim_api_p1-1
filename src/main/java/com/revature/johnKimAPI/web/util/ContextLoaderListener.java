@@ -8,11 +8,9 @@ import com.mongodb.client.MongoClient;
 import com.revature.johnKimAPI.repositories.SchoolRepository;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.GetMongoClient;
+
 import com.revature.johnKimAPI.web.filters.AuthFilter;
-import com.revature.johnKimAPI.web.servlet.AuthServlet;
-import com.revature.johnKimAPI.web.servlet.CourseServlet;
-import com.revature.johnKimAPI.web.servlet.HealthCheckServlet;
-import com.revature.johnKimAPI.web.servlet.FacServlet;
+import com.revature.johnKimAPI.web.servlet.*;
 import com.revature.johnKimAPI.web.util.security.JwtConfig;
 import com.revature.johnKimAPI.web.util.security.TokenGenerator;
 import org.slf4j.LoggerFactory;
@@ -41,7 +39,8 @@ public class ContextLoaderListener implements ServletContextListener {
         HealthCheckServlet health = new HealthCheckServlet();
         AuthServlet authServlet = new AuthServlet(userService, mapper, generator);
         CourseServlet courseServlet = new CourseServlet(userService, mapper);
-//        UserServlet userServlet = new UserServlet(userService, mapper);
+        RegistrationServlet registrationServlet = new RegistrationServlet(userService, mapper);
+        EnrollServlet enrollServlet = new EnrollServlet(userService, mapper);
 
         AuthFilter authFilter = new AuthFilter(jwtConfig);
 
@@ -51,7 +50,8 @@ public class ContextLoaderListener implements ServletContextListener {
         servletContext.addServlet("HealthCheckServlet", health).addMapping("/health/*");
         servletContext.addServlet("AuthServlet", authServlet).addMapping("/auth/*");
         servletContext.addServlet("CourseServlet", courseServlet).addMapping("/course/*");
-//        servletContext.addServlet("UserServlet", userServlet).addMapping("/users/*");
+        servletContext.addServlet("RegistrationServlet", registrationServlet).addMapping("/register/*");
+        servletContext.addServlet("EnrollServlet", enrollServlet).addMapping("/enroll/*");
 
         configureLogback(servletContext);
     }
