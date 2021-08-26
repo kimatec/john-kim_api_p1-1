@@ -16,21 +16,17 @@ public class Principal {
 
     public Principal() { super(); }
 
-    public Principal(String id, String username) {
-        this.id = id;
-        this.username = username;
-    }
-
     public Principal(Student student) {
         this.id = student.getStudentID();
         this.username = student.getUsername();
+        this.lastName = null;
         this.role = student.isRole();
     }
 
     public Principal(Faculty faculty) {
         this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
-//        this.lastName = faculty.getLastName();
+        this.lastName = faculty.getLastName();
         this.role = faculty.isRole();
     }
 
