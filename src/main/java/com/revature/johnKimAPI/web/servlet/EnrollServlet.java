@@ -20,10 +20,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-/**
- * The purpose of the CourseServlet is to interact with Faculty-created courses, allowing queries to choose how they
- * are Read, Created, Updated, or Deleted.
- */
 
 public class EnrollServlet extends HttpServlet {
 
@@ -41,11 +37,9 @@ public class EnrollServlet extends HttpServlet {
         resp.setContentType("application/json");
 
 
-        // Establish query parameters
         String opening = req.getParameter("open");
         String enrolledCourse = req.getParameter("enrolled");
 
-        // Attempt to fulfill user request.
         try {
             if(!(opening == null)) {
                 List<Course> openCourses = userService.getOpenClasses();
@@ -107,7 +101,7 @@ public class EnrollServlet extends HttpServlet {
             resp.setStatus(409);
             ErrorResponse errResp = new ErrorResponse(409, rpe.getMessage());
             respWriter.write(mapper.writeValueAsString(errResp));
-        } catch(Exception e) { // For some reason, the execution failed.
+        } catch(Exception e) {
             e.printStackTrace();
             resp.setStatus(500);
         }
