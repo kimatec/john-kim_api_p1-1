@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Replaced the authfac object in the API with a call to the lastname of the requesting user.">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Decided against using the lastName field provided by the requestingUser for locating courses.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/dtos/Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629989517639</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Decided against using the lastName field provided by the requestingUser for locating courses.">
+      <created>1629990800339</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1629990800339</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,7 +392,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rebranded the application to be &quot;school&quot; rather than kim-john-api-p1. It is much less of a mouthful." />
     <MESSAGE value="Added AuthServlet and gave it some body." />
     <MESSAGE value="Fixed an error with the filesteam of applicationProperties." />
     <MESSAGE value="Fixed an error with the filestream of applicationProperties." />
@@ -411,7 +416,8 @@
     <MESSAGE value="Sanity push" />
     <MESSAGE value="Added lastname to principal in hopes of returning a valid AuthUser for Javascript manipulation." />
     <MESSAGE value="Replaced the authfac object in the API with a call to the lastname of the requesting user." />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced the authfac object in the API with a call to the lastname of the requesting user." />
+    <MESSAGE value="Decided against using the lastName field provided by the requestingUser for locating courses." />
+    <option name="LAST_COMMIT_MESSAGE" value="Decided against using the lastName field provided by the requestingUser for locating courses." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

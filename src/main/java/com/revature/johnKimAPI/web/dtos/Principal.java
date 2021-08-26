@@ -30,7 +30,7 @@ public class Principal {
     public Principal(Faculty faculty) {
         this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
-        this.lastName = faculty.getLastName();
+//        this.lastName = faculty.getLastName();
         this.role = faculty.isRole();
     }
 
