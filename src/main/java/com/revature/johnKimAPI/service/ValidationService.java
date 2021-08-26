@@ -140,7 +140,7 @@ public class ValidationService {
         public List<Enrolled> getMyCourses() { return schoolRepo.findEnrolledByUsername(this.authStudent.getUsername()); }
 
         // This fetches the list of classes associated with a certain teacher name.
-        public List<Course> getTeacherClasses() { return schoolRepo.findCourseByTeacher(this.authFac.getLastName()); }
+        public List<Course> getTeacherClasses(String teacher) { return schoolRepo.findCourseByTeacher(teacher); }
 
         public void updateCourse(Course newCourse, String id) {
                 if(isCourseValid(newCourse)) {
