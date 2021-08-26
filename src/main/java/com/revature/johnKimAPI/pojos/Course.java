@@ -17,7 +17,7 @@ public class Course {
     boolean isOpen;
 
     // Empty, no args constructor necessary for Mongo to grab the course object.
-    public Course() {}
+    public Course(Enrolled enrolled) {}
 
     public Course(String name, String id, String desc, String teacher, boolean isOpen) {
         this.name = name;

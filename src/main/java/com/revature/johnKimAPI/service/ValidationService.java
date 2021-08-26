@@ -42,7 +42,6 @@ public class ValidationService {
                 schoolRepo.save(newStudent);
                 logger.info("New Student registered!" + newStudent);
 
-               // return new Principal(newStudent);
                 return newStudent;
         }
 
@@ -66,13 +65,13 @@ public class ValidationService {
 
         // This enrolls a student into a course, grafting their username to it,
         // and placing it within the separate 'enrolled' database.
-        public Principal enroll(Course selectedCourse) {
+        public Course enroll(Course selectedCourse) {
                 if (isCourseValid(selectedCourse)) {
                         Enrolled enrollIn = new Enrolled(this.authStudent.getUsername(), selectedCourse.getName(),
                                 selectedCourse.getClassID(), selectedCourse.getDesc(), selectedCourse.getTeacher());
                         schoolRepo.enroll(enrollIn);
                 }
-                return null;
+                return selectedCourse;
         }
 
         // Wipes user data and sets the session to an invalid one.
