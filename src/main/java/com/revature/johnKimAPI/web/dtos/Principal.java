@@ -11,6 +11,7 @@ public class Principal {
 
     private String id;
     private String username;
+    private String lastName;
     private boolean role;
 
     public Principal() { super(); }
@@ -29,6 +30,7 @@ public class Principal {
     public Principal(Faculty faculty) {
         this.id = faculty.getTeacherID();
         this.username = faculty.getUsername();
+        this.lastName = faculty.getLastName();
         this.role = faculty.isRole();
     }
 
@@ -52,6 +54,14 @@ public class Principal {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getUsername() {

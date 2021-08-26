@@ -41,6 +41,7 @@ public class Student {
         this.firstName = principal.getFirstName();
         this.lastName = principal.getLastName();
         this.email = principal.getEmail();
+    }
 
     public boolean isRole() {
         return role;
