@@ -70,21 +70,16 @@ public class EnrollServlet extends HttpServlet {
         try {
             Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
 
+            // TODO: This won't work because it isn't JSON script!
+            if(cancel != null) {
 
-            if(!(cancel == null)) {
-
-                resp.getWriter().write("Canceling  " + enrolled.getUsername() + "...");
-                userService.deregister(enrolled.getUsername());
-
+                resp.getWriter().write("Canceling  " + enrolled.getClassID() + "...");
+                userService.deregister(enrolled.getClassID(), enrolled.getUsername());
                 resp.getWriter().write("Course successfully canceled!");
 
-            } else if(!(register == null)){
-
-                Course registered = new Course(enrolled);
-
-                Course registerCourse = userService.enroll(registered);
-
-                resp.getWriter().write("Course successfully registered!" + registerCourse);
+            } else if(register != null){
+                userService.enroll(enrolled);
+                resp.getWriter().write("Course successfully registered!" + enrolled);
             }
 
         } catch(InvalidRequestException | MismatchedInputException e) {

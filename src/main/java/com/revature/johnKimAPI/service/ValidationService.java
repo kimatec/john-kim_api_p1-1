@@ -65,13 +65,8 @@ public class ValidationService {
 
         // This enrolls a student into a course, grafting their username to it,
         // and placing it within the separate 'enrolled' database.
-        public Course enroll(Course selectedCourse) {
-                if (isCourseValid(selectedCourse)) {
-                        Enrolled enrollIn = new Enrolled(this.authStudent.getUsername(), selectedCourse.getName(),
-                                selectedCourse.getClassID(), selectedCourse.getDesc(), selectedCourse.getTeacher());
-                        schoolRepo.enroll(enrollIn);
-                }
-                return selectedCourse;
+        public void enroll(Enrolled selectedCourse) {
+                schoolRepo.enroll(selectedCourse);
         }
 
         // Wipes user data and sets the session to an invalid one.
@@ -164,17 +159,15 @@ public class ValidationService {
                 return false;
         }
 
-        public boolean deregister(String id) {
+        public void deregister(String id, String username) {
                 try {
                         if (isClassIDValid(id) && isClassIDTaken(id)) {
-                                schoolRepo.deleteEnrolled(id, this.authStudent.getUsername());
+                                schoolRepo.deleteEnrolled(id, username);
                                 logger.info("Course " + id + " owned by " + authStudent.getUsername() + " deleted!");
-                                return true;
                         }
                 } catch(InvalidRequestException ire) {
                         System.out.println(ire.getMessage());
                 }
-                return false;
         }
 
 
