@@ -38,7 +38,7 @@ public class EnrollServlet extends HttpServlet {
         Principal requestingUser = (Principal)req.getAttribute("principal");
 
 
-        String opening = req.getParameter("open");
+      //  String opening = req.getParameter("open");
         String enrolledCourse = req.getParameter("enrolled");
 
         try {
@@ -70,16 +70,19 @@ public class EnrollServlet extends HttpServlet {
         try {
             Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
 
-            // TODO: This won't work because it isn't JSON script!
             if(cancel != null) {
 
-                resp.getWriter().write("Canceling  " + enrolled.getClassID() + "...");
                 userService.deregister(enrolled.getClassID(), enrolled.getUsername());
-                resp.getWriter().write("Course successfully canceled!");
+
+                ErrorResponse errInfo = new ErrorResponse(200, "Course canceled!");
+                resp.getWriter().write(mapper.writeValueAsString(errInfo));
 
             } else if(register != null){
+
                 userService.enroll(enrolled);
-                resp.getWriter().write("Course successfully registered!" + enrolled);
+
+                ErrorResponse errInfo = new ErrorResponse(200, "Course registered!");
+                resp.getWriter().write(mapper.writeValueAsString(errInfo));
             }
 
         } catch(InvalidRequestException | MismatchedInputException e) {
