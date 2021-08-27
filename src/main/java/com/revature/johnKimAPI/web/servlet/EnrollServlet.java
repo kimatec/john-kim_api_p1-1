@@ -4,18 +4,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import com.revature.johnKimAPI.pojos.Course;
 import com.revature.johnKimAPI.pojos.Enrolled;
-import com.revature.johnKimAPI.pojos.Student;
-import com.revature.johnKimAPI.pojos.StudentPrincipal;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.exceptions.InvalidRequestException;
 import com.revature.johnKimAPI.util.exceptions.ResourceNotFoundException;
 import com.revature.johnKimAPI.util.exceptions.ResourcePersistenceException;
 import com.revature.johnKimAPI.web.dtos.ErrorResponse;
 import com.revature.johnKimAPI.web.dtos.Principal;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -36,21 +34,18 @@ public class EnrollServlet extends HttpServlet {
         PrintWriter respWriter = resp.getWriter();
         resp.setContentType("application/json");
 
+        // Get the session from the request
+        Principal requestingUser = (Principal)req.getAttribute("principal");
+
 
         String opening = req.getParameter("open");
         String enrolledCourse = req.getParameter("enrolled");
 
         try {
-            if(!(opening == null)) {
-                List<Course> openCourses = userService.getOpenClasses();
-                respWriter.write(mapper.writeValueAsString(openCourses));
-
-            } else if(!(enrolledCourse == null)) {
-                List<Enrolled> enrolled = userService.getMyCourses();
+            if(enrolledCourse != null) {
+                List<Enrolled> enrolled = userService.getMyCourses(requestingUser.getUsername());
                 respWriter.write(mapper.writeValueAsString(enrolled));
-
             }
-
         } catch (ResourceNotFoundException rnfe) {
             resp.setStatus(404);
             ErrorResponse errResp = new ErrorResponse(404, "No course found!");

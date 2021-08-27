@@ -54,10 +54,10 @@ public class CourseServlet extends HttpServlet {
 
         // Attempt to fulfill user request.
         try {
-            if(!(lookingForOpen == null)) {
+            if(lookingForOpen != null) {
                 List<Course> openCourses = authService.getOpenClasses();
                 respWriter.write(mapper.writeValueAsString(openCourses));
-            } else if(!(courseID == null)) {
+            } else if(courseID != null) {
                 Course foundCourse = authService.getCourseByID(courseID);
                 respWriter.write(mapper.writeValueAsString(foundCourse));
             } else if (!requestingUser.isRole()) {
@@ -106,7 +106,7 @@ public class CourseServlet extends HttpServlet {
         try {
             Course course = mapper.readValue(req.getInputStream(), Course.class);
 
-            if(!(delete == null)) {
+            if(delete != null) {
                 // Notify the user of your goal.
                 System.out.println("Attempting to delete course " + course.getClassID() + "...");
                 authService.deleteCourse(course.getClassID());
@@ -114,7 +114,7 @@ public class CourseServlet extends HttpServlet {
                 // Send them back a 200 to denote success.
                 ErrorResponse infoResp = new ErrorResponse(200, "Course successfully deleted!");
                 resp.getWriter().write(mapper.writeValueAsString(infoResp));
-            } else if(!(update == null)) {
+            } else if(update != null) {
                 // Notify the user of your goal.
                 System.out.println("Attempting to update course " + course.getClassID() + "...");
                 authService.updateCourse(course, course.getClassID());
