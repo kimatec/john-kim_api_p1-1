@@ -38,7 +38,7 @@ public class EnrollServlet extends HttpServlet {
         Principal requestingUser = (Principal)req.getAttribute("principal");
 
 
-      //  String opening = req.getParameter("open");
+        String opening = req.getParameter("open");
         String enrolledCourse = req.getParameter("enrolled");
 
         try {
