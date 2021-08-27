@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Swapped the Cors filter to allow traffic from the UI URL.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Swapped the Cors filter over to Localhost 3000">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignments/some-challenges" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -66,13 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628881038387</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Implemented a ContextLoaderListener">
-      <created>1628882236825</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1628882236825</updated>
     </task>
     <task id="LOCAL-00002" summary="Committing three POJOs for the purposes of encapsulation">
       <created>1628882838155</created>
@@ -410,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630018705235</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Swapped the Cors filter over to Localhost 3000">
+      <created>1630018985929</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1630018985930</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,7 +426,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Committing .gitignore to main project body." />
     <MESSAGE value="Test Push" />
     <MESSAGE value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
     <MESSAGE value="Repairing the Cors Filter" />
@@ -451,7 +450,8 @@
     <MESSAGE value="Repaired the authentication system to maintain integrity of the last names and such." />
     <MESSAGE value="Repaired the json problem." />
     <MESSAGE value="Swapped the Cors filter to allow traffic from the UI URL." />
-    <option name="LAST_COMMIT_MESSAGE" value="Swapped the Cors filter to allow traffic from the UI URL." />
+    <MESSAGE value="Swapped the Cors filter over to Localhost 3000" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swapped the Cors filter over to Localhost 3000" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
