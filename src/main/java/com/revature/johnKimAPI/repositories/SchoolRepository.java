@@ -81,6 +81,8 @@ public class SchoolRepository {
 
             Document newDoc = new Document ("classID", course.getClassID())
                                         .append("name", course.getName())
+                                        .append("teacher", course.getTeacher())
+                                        .append("username", course.getUsername())
                                         .append("open", true);
             // this inserts the instance into the "StudentCredentials" database.
             collection.insertOne(newDoc);
@@ -158,13 +160,13 @@ public class SchoolRepository {
 
 
     // This is used so that students can see their courses.
-    public Enrolled findEnrolledByUsername(String name) {
+    public Enrolled findEnrolledByUsername(String username) {
 
             MongoDatabase p0school = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
             MongoCollection<Enrolled> usersCollection = p0school.getCollection("enrolled", Enrolled.class);
-            Document queryDoc = new Document("name", name);
+            Document queryDoc = new Document("username", username);
             return usersCollection.find(queryDoc).first();
-            
+
     }
 
     // This method is primarily used by Teachers to find classes that they put onto the database, for deletion and updates.

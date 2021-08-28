@@ -30,6 +30,8 @@ public class Enrolled {
     public Enrolled(EnrolledCourse enrolledCourse){
         this.classID = enrolledCourse.getClassID();
         this.name = enrolledCourse.getName();
+        this.teacher = enrolledCourse.getTeacher();
+        this.username = enrolledCourse.getUsername();
     }
 
     public String getClassID() {
