@@ -42,7 +42,7 @@ public class EnrollServlet extends HttpServlet {
 
         try {
             if(enrolledCourse != null) {
-                List<Enrolled> enrolled = userService.getMyCourses();
+                Enrolled enrolled = userService.getMyCourses(enrolledCourse);
                 respWriter.write(mapper.writeValueAsString(enrolled));
             }
         } catch (ResourceNotFoundException rnfe) {

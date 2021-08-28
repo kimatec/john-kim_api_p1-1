@@ -158,16 +158,13 @@ public class SchoolRepository {
 
 
     // This is used so that students can see their courses.
-    public List<Enrolled> findEnrolledByUsername() {
+    public Enrolled findEnrolledByUsername(String name) {
 
         try {
             MongoDatabase p0school = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
-            MongoCollection<Enrolled> usersCollection = p0school.getCollection("enrolled", Enrolled.class);
-            Document queryDoc = new Document("open", true);
-            List<Enrolled> courses = new ArrayList<>();
-            usersCollection.find(queryDoc).into(courses);
+            MongoCollection<Document> usersCollection = p0school.getCollection("enrolled");
+            usersCollection.find();
 
-            return courses;
         } catch (Exception e) {
             System.out.println("An exception has occurred!" + e.getMessage());
             logger.error("Problem occurred when parsing the data from Mongo. Full Stack Trace follows:: " + e);
