@@ -77,10 +77,12 @@ public class EnrollServlet extends HttpServlet {
 
             } else{
 
-                userService.enroll(enrolled);
+                Enrolled newEnroll = userService.enroll(enrolled);
+                String payload = mapper.writeValueAsString(newEnroll);
+                resp.getWriter().write(payload);
 
-                ErrorResponse errInfo = new ErrorResponse(200, "Course registered!");
-                resp.getWriter().write(mapper.writeValueAsString(errInfo));
+                //ErrorResponse errInfo = new ErrorResponse(200, "Course registered!");
+               // resp.getWriter().write(mapper.writeValueAsString(errInfo));
             }
 
         } catch(InvalidRequestException | MismatchedInputException e) {

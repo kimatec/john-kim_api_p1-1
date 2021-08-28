@@ -74,18 +74,22 @@ public class SchoolRepository {
         return newStudent;
     }
 
-    public void enroll(Enrolled course) {
+    public Enrolled enroll(Enrolled course) {
         try {
             MongoDatabase database = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
-            MongoCollection<Enrolled> collection = database.getCollection("enrolled", Enrolled.class);
+            MongoCollection<Document> collection = database.getCollection("enrolled");
 
+            Document newDoc = new Document ("classID", course.getClassID())
+                                        .append("name", course.getName())
+                                        .append("open", true);
             // this inserts the instance into the "StudentCredentials" database.
-            collection.insertOne(course);
+            collection.insertOne(newDoc);
 
         } catch (Exception e) {
             logger.error("Threw an exception at SchoolRepository::register(), full StackTrace follows: " + e);
             throw new ResourcePersistenceException("We could not enroll you in that course!");
         }
+        return course;
     }
 
     public void newCourse(Course course) {
