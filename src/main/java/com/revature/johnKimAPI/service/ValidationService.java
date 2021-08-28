@@ -127,7 +127,8 @@ public class ValidationService {
         }
 
         // This returns one class at the user's request (for the purposes of an update function)
-        public Course getCourseByID(String id) { return schoolRepo.findCourseByID(id); }
+        public Course getCourseByID(String id) {
+                return schoolRepo.findCourseByID(id); }
 
         // This returns all classes that are open for enrollment.
         public List<Course> getOpenClasses() { return schoolRepo.findCourseByOpen(); }
@@ -135,9 +136,7 @@ public class ValidationService {
         // This returns all classes associated with a student username.
         public Enrolled getMyCourses(String name) {
 
-                Enrolled registeredCourse = schoolRepo.findEnrolledByUsername(name);
-
-                return registeredCourse;
+                return schoolRepo.findEnrolledByUsername(name);
         }
         // This fetches the list of classes associated with a certain teacher name.
         public List<Course> getTeacherClasses(String teacher) { return schoolRepo.findCourseByTeacher(teacher); }

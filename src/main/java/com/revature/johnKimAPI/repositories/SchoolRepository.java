@@ -160,16 +160,11 @@ public class SchoolRepository {
     // This is used so that students can see their courses.
     public Enrolled findEnrolledByUsername(String name) {
 
-        try {
             MongoDatabase p0school = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
-            MongoCollection<Document> usersCollection = p0school.getCollection("enrolled");
-            usersCollection.find();
-
-        } catch (Exception e) {
-            System.out.println("An exception has occurred!" + e.getMessage());
-            logger.error("Problem occurred when parsing the data from Mongo. Full Stack Trace follows:: " + e);
-        }
-        return null;
+            MongoCollection<Enrolled> usersCollection = p0school.getCollection("enrolled", Enrolled.class);
+            Document queryDoc = new Document("name", name);
+            return usersCollection.find(queryDoc).first();
+            
     }
 
     // This method is primarily used by Teachers to find classes that they put onto the database, for deletion and updates.
