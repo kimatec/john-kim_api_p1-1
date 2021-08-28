@@ -158,12 +158,12 @@ public class SchoolRepository {
 
 
     // This is used so that students can see their courses.
-    public List<Enrolled> findEnrolledByUsername(String username) {
+    public List<Enrolled> findEnrolledByUsername() {
 
         try {
             MongoDatabase p0school = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
             MongoCollection<Enrolled> usersCollection = p0school.getCollection("enrolled", Enrolled.class);
-            Document queryDoc = new Document("username", username);
+            Document queryDoc = new Document("open", true);
             List<Enrolled> courses = new ArrayList<>();
             usersCollection.find(queryDoc).into(courses);
 
