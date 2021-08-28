@@ -37,8 +37,6 @@ public class EnrollServlet extends HttpServlet {
         // Get the session from the request
         Principal requestingUser = (Principal)req.getAttribute("principal");
 
-
-        String opening = req.getParameter("open");
         String enrolledCourse = req.getParameter("enrolled");
 
         try {
@@ -65,7 +63,7 @@ public class EnrollServlet extends HttpServlet {
 
 
         String cancel = req.getParameter("cancel");
-        String register = req.getParameter("register");
+       // String register = req.getParameter("register");
 
         try {
             Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
@@ -77,7 +75,7 @@ public class EnrollServlet extends HttpServlet {
                 ErrorResponse errInfo = new ErrorResponse(200, "Course canceled!");
                 resp.getWriter().write(mapper.writeValueAsString(errInfo));
 
-            } else if(register != null){
+            } else{
 
                 userService.enroll(enrolled);
 
