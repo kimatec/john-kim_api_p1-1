@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import com.revature.johnKimAPI.pojos.Course;
 import com.revature.johnKimAPI.pojos.Enrolled;
+import com.revature.johnKimAPI.pojos.EnrolledCourse;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.exceptions.InvalidRequestException;
 import com.revature.johnKimAPI.util.exceptions.ResourceNotFoundException;
@@ -77,8 +78,11 @@ public class EnrollServlet extends HttpServlet {
 
             } else{
 
-                Enrolled newEnroll = userService.enroll(enrolled);
-                String payload = mapper.writeValueAsString(newEnroll);
+                EnrolledCourse newEnrolled = mapper.readValue(req.getInputStream(), EnrolledCourse.class);
+                Enrolled newEnroll = new Enrolled(newEnrolled);
+
+                Enrolled newCourses = userService.enroll(newEnroll);
+                String payload = mapper.writeValueAsString(newCourses);
                 resp.getWriter().write(payload);
 
                 //ErrorResponse errInfo = new ErrorResponse(200, "Course registered!");

@@ -27,6 +27,11 @@ public class Enrolled {
         this.teacher = teacher;
     }
 
+    public Enrolled(EnrolledCourse enrolledCourse){
+        this.classID = enrolledCourse.getClassID();
+        this.name = enrolledCourse.getName();
+    }
+
     public String getClassID() {
         return classID;
     }
