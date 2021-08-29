@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Made the Enroll methods return void, since their return value was never used.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added JWT validation for the Enrollment POST method.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628881038387</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Removed a depreciated relic, log4j2.xml.">
-      <created>1628884580672</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1628884580672</updated>
     </task>
     <task id="LOCAL-00007" summary="QOL changes">
       <created>1628885330839</created>
@@ -410,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630255080633</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Added JWT validation for the Enrollment POST method.">
+      <created>1630255405611</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1630255405611</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,7 +426,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Pushing singular access-control header to the database for solely localhost testing." />
     <MESSAGE value="Sanity check push" />
     <MESSAGE value="Sanity check push x2" />
     <MESSAGE value="Removed the pathing to be more plain/reliable." />
@@ -451,7 +450,8 @@
     <MESSAGE value="Bettered the Enroll Servlet." />
     <MESSAGE value="Repaired the Enroll servlet to diligently perform its duties." />
     <MESSAGE value="Made the Enroll methods return void, since their return value was never used." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the Enroll methods return void, since their return value was never used." />
+    <MESSAGE value="Added JWT validation for the Enrollment POST method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JWT validation for the Enrollment POST method." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

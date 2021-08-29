@@ -69,7 +69,7 @@ public class EnrollServlet extends HttpServlet {
 
 
         try {
-            if (requestingUser==null) {
+            if (requestingUser!=null) {
             if (cancel != null) {
 
                 Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
