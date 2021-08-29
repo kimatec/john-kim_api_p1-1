@@ -38,13 +38,13 @@ public class EnrollServlet extends HttpServlet {
         // Get the session from the request
         Principal requestingUser = (Principal)req.getAttribute("principal");
 
-        String enrolledCourse = req.getParameter("enrolled");
+       // String enrolledCourse = req.getParameter("enrolled");
 
         try {
-            if(enrolledCourse != null) {
+
                 Enrolled enrolled = userService.getMyCourses(requestingUser.getUsername());
                 respWriter.write(mapper.writeValueAsString(enrolled));
-            }
+
         } catch (ResourceNotFoundException rnfe) {
             resp.setStatus(404);
             ErrorResponse errResp = new ErrorResponse(404, "No course found!");
