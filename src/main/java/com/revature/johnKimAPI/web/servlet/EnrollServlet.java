@@ -109,6 +109,8 @@ public class EnrollServlet extends HttpServlet {
         } catch(Exception e) {
             e.printStackTrace();
             resp.setStatus(500);
+            ErrorResponse errResp = new ErrorResponse(500, e.getMessage());
+            respWriter.write(mapper.writeValueAsString(errResp));
         }
     }
 }
