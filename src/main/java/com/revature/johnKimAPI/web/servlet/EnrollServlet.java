@@ -62,11 +62,14 @@ public class EnrollServlet extends HttpServlet {
         PrintWriter respWriter = resp.getWriter();
         resp.setContentType("application/json");
 
+        // Get the session from the request
+        Principal requestingUser = (Principal)req.getAttribute("principal");
 
         String cancel = req.getParameter("cancel");
 
-        try {
 
+        try {
+            if (requestingUser==null) {
             if (cancel != null) {
 
                 Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
@@ -84,6 +87,10 @@ public class EnrollServlet extends HttpServlet {
                 ErrorResponse respInfo = new ErrorResponse(201, "Course registered!");
                 resp.getWriter().write(mapper.writeValueAsString(respInfo));
 
+            }
+            } else {
+                ErrorResponse errResp = new ErrorResponse(403, "You are not logged in, or have no valid JWT!");
+                resp.getWriter().write(mapper.writeValueAsString(errResp));
             }
         } catch(JsonParseException jpe) {
             jpe.printStackTrace();

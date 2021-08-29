@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Repaired the Enroll servlet to diligently perform its duties.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Made the Enroll methods return void, since their return value was never used.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628881038387</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Made an index page and configured logback.xml">
-      <created>1628884450405</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1628884450405</updated>
     </task>
     <task id="LOCAL-00006" summary="Removed a depreciated relic, log4j2.xml.">
       <created>1628884580672</created>
@@ -411,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630254547309</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Made the Enroll methods return void, since their return value was never used.">
+      <created>1630255080633</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1630255080633</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -427,7 +426,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed the second 'Access-Control-Allow-Origin' header from the filter." />
     <MESSAGE value="Pushing singular access-control header to the database for solely localhost testing." />
     <MESSAGE value="Sanity check push" />
     <MESSAGE value="Sanity check push x2" />
@@ -452,7 +450,8 @@
     <MESSAGE value="Repaired the Course and Enrolled servlet to be a little neater." />
     <MESSAGE value="Bettered the Enroll Servlet." />
     <MESSAGE value="Repaired the Enroll servlet to diligently perform its duties." />
-    <option name="LAST_COMMIT_MESSAGE" value="Repaired the Enroll servlet to diligently perform its duties." />
+    <MESSAGE value="Made the Enroll methods return void, since their return value was never used." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made the Enroll methods return void, since their return value was never used." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
