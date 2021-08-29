@@ -36,13 +36,13 @@ public class EnrollServlet extends HttpServlet {
         resp.setContentType("application/json");
 
         // Get the session from the request
-        //Principal requestingUser = (Principal)req.getAttribute("principal");
+        Principal requestingUser = (Principal)req.getAttribute("principal");
 
         String username = req.getParameter("enrolled");
 
         try {
             if(username != null) {
-                Enrolled enrolled = userService.getMyCourses(username);
+                Enrolled enrolled = userService.getMyCourses(requestingUser.getUsername());
                 respWriter.write(mapper.writeValueAsString(enrolled));
             }
         } catch (ResourceNotFoundException rnfe) {

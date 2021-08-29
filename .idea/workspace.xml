@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Swapped the Cors filter to allow traffic from the UI URL.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
