@@ -38,11 +38,11 @@ public class EnrollServlet extends HttpServlet {
         // Get the session from the request
         //Principal requestingUser = (Principal)req.getAttribute("principal");
 
-        String enrolledCourse = req.getParameter("enrolled");
+        String username = req.getParameter("enrolled");
 
         try {
-            if(enrolledCourse != null) {
-                Enrolled enrolled = userService.getMyCourses(enrolledCourse);
+            if(username != null) {
+                Enrolled enrolled = userService.getMyCourses(username);
                 respWriter.write(mapper.writeValueAsString(enrolled));
             }
         } catch (ResourceNotFoundException rnfe) {
@@ -67,10 +67,10 @@ public class EnrollServlet extends HttpServlet {
        // String register = req.getParameter("register");
 
         try {
-            Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
 
             if(cancel != null) {
 
+                Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
                 userService.deregister(enrolled.getClassID(), enrolled.getUsername());
 
                 ErrorResponse errInfo = new ErrorResponse(200, "Course canceled!");

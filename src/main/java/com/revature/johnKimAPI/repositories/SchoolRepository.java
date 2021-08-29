@@ -164,7 +164,8 @@ public class SchoolRepository {
 
             MongoDatabase p0school = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
             MongoCollection<Enrolled> usersCollection = p0school.getCollection("enrolled", Enrolled.class);
-            return usersCollection.find().first();
+            Document queryDoc = new Document("username", username);
+            return usersCollection.find(queryDoc).first();
 
     }
 

@@ -66,8 +66,8 @@ public class ValidationService {
         // This enrolls a student into a course, grafting their username to it,
         // and placing it within the separate 'enrolled' database.
         public Enrolled enroll(Enrolled course) {
-                return schoolRepo.enroll(course);
-
+                schoolRepo.enroll(course);
+                return course;
         }
 
         // Wipes user data and sets the session to an invalid one.
