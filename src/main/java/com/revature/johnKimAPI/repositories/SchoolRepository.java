@@ -74,7 +74,7 @@ public class SchoolRepository {
         return newStudent;
     }
 
-    public Enrolled enroll(Enrolled course) {
+    public void enroll(Enrolled course) {
         try {
             MongoDatabase database = mongoClient.getDatabase("Project0School").withCodecRegistry(pojoCodecRegistry);
             MongoCollection<Document> collection = database.getCollection("enrolled");
@@ -91,7 +91,6 @@ public class SchoolRepository {
             logger.error("Threw an exception at SchoolRepository::register(), full StackTrace follows: " + e);
             throw new ResourcePersistenceException("We could not enroll you in that course!");
         }
-        return course;
     }
 
     public void newCourse(Course course) {

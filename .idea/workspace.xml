@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Bettered the Enroll Servlet.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Enrolled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Enrolled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/EnrolledCourse.java" beforeDir="false" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Repaired the Enroll servlet to diligently perform its duties.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,13 +67,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628881038387</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added a skeleton to the User Servlet">
-      <created>1628884202258</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1628884202258</updated>
     </task>
     <task id="LOCAL-00005" summary="Made an index page and configured logback.xml">
       <created>1628884450405</created>
@@ -416,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630077193323</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Repaired the Enroll servlet to diligently perform its duties.">
+      <created>1630254547305</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1630254547309</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -432,7 +427,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Repairing the Cors Filter" />
     <MESSAGE value="Removed the second 'Access-Control-Allow-Origin' header from the filter." />
     <MESSAGE value="Pushing singular access-control header to the database for solely localhost testing." />
     <MESSAGE value="Sanity check push" />
@@ -457,7 +451,8 @@
     <MESSAGE value="Swapped the Cors filter over to Localhost 3000" />
     <MESSAGE value="Repaired the Course and Enrolled servlet to be a little neater." />
     <MESSAGE value="Bettered the Enroll Servlet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bettered the Enroll Servlet." />
+    <MESSAGE value="Repaired the Enroll servlet to diligently perform its duties." />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired the Enroll servlet to diligently perform its duties." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
