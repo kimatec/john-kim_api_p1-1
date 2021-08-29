@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Added an errResp for the standard Error message in EnrollServlet" />
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Changing CORS Filter to listen for input from the S3-hosted UI.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/filters/CorsFilter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,13 +67,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628881038387</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added buildspec.yml">
-      <created>1628886705836</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1628886705836</updated>
     </task>
     <task id="LOCAL-00010" summary="Modified buildspec.yml">
       <created>1628887555760</created>
@@ -408,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630263560847</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Changing CORS Filter to listen for input from the S3-hosted UI.">
+      <created>1630265439221</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1630265439222</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,7 +427,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed the pathing to be more plain/reliable." />
     <MESSAGE value="Sanity Push x3" />
     <MESSAGE value="Removing a slash from the current cors filter ACAO header." />
     <MESSAGE value="Switching CORS filter for testing." />
@@ -449,7 +451,8 @@
     <MESSAGE value="Added JWT validation for the Enrollment POST method." />
     <MESSAGE value="Repaired a problem with JWT validation in EnrollServlet" />
     <MESSAGE value="Added an errResp for the standard Error message in EnrollServlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added an errResp for the standard Error message in EnrollServlet" />
+    <MESSAGE value="Changing CORS Filter to listen for input from the S3-hosted UI." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing CORS Filter to listen for input from the S3-hosted UI." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
