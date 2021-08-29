@@ -1,5 +1,7 @@
 package com.revature.johnKimAPI.pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Objects;
 
 /**
@@ -8,6 +10,7 @@ import java.util.Objects;
  * they aren't tagged with any specific student.
  */
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Enrolled {
     private String classID;
     private String username;
@@ -25,13 +28,6 @@ public class Enrolled {
         this.classID = id;
         this.desc = desc;
         this.teacher = teacher;
-    }
-
-    public Enrolled(EnrolledCourse enrolledCourse){
-        this.classID = enrolledCourse.getClassID();
-        this.name = enrolledCourse.getName();
-        this.teacher = enrolledCourse.getTeacher();
-        this.username = enrolledCourse.getUsername();
     }
 
     public String getClassID() {
@@ -71,7 +67,7 @@ public class Enrolled {
     }
 
     public void setOpen(boolean open) {
-        isOpen = open;
+        this.isOpen = open;
     }
 
     public String getUsername() {

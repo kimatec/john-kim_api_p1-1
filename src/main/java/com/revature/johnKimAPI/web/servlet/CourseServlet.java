@@ -112,7 +112,7 @@ public class CourseServlet extends HttpServlet {
                 authService.deleteCourse(course.getClassID());
 
                 // Send them back a 200 to denote success.
-                ErrorResponse infoResp = new ErrorResponse(200, "Course successfully deleted!");
+                ErrorResponse infoResp = new ErrorResponse(204, "Course successfully deleted!");
                 resp.getWriter().write(mapper.writeValueAsString(infoResp));
             } else if(update != null) {
                 // Notify the user of your goal.

@@ -1,10 +1,9 @@
 package com.revature.johnKimAPI.web.servlet;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
-import com.revature.johnKimAPI.pojos.Course;
 import com.revature.johnKimAPI.pojos.Enrolled;
-import com.revature.johnKimAPI.pojos.EnrolledCourse;
 import com.revature.johnKimAPI.service.ValidationService;
 import com.revature.johnKimAPI.util.exceptions.InvalidRequestException;
 import com.revature.johnKimAPI.util.exceptions.ResourceNotFoundException;
@@ -38,12 +37,13 @@ public class EnrollServlet extends HttpServlet {
         // Get the session from the request
         Principal requestingUser = (Principal)req.getAttribute("principal");
 
-        String username = req.getParameter("enrolled");
-
         try {
-            if(username != null) {
-                Enrolled enrolled = userService.getMyCourses(requestingUser.getUsername());
+            if(requestingUser.getUsername() != null) {
+                List<Enrolled> enrolled = userService.getMyCourses(requestingUser.getUsername());
                 respWriter.write(mapper.writeValueAsString(enrolled));
+            } else {
+                ErrorResponse errResp = new ErrorResponse(400, "You are not logged in, and have no valid username!");
+                respWriter.write(mapper.writeValueAsString(errResp));
             }
         } catch (ResourceNotFoundException rnfe) {
             resp.setStatus(404);
@@ -64,31 +64,32 @@ public class EnrollServlet extends HttpServlet {
 
 
         String cancel = req.getParameter("cancel");
-       // String register = req.getParameter("register");
 
         try {
 
-            if(cancel != null) {
+            if (cancel != null) {
 
                 Enrolled enrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
                 userService.deregister(enrolled.getClassID(), enrolled.getUsername());
 
-                ErrorResponse errInfo = new ErrorResponse(200, "Course canceled!");
-                resp.getWriter().write(mapper.writeValueAsString(errInfo));
+                ErrorResponse respInfo = new ErrorResponse(204, "Course canceled!");
+                resp.getWriter().write(mapper.writeValueAsString(respInfo));
 
-            } else{
+            } else {
 
-                EnrolledCourse newEnrolled = mapper.readValue(req.getInputStream(), EnrolledCourse.class);
-                Enrolled newEnroll = new Enrolled(newEnrolled);
+                Enrolled newEnrolled = mapper.readValue(req.getInputStream(), Enrolled.class);
 
-                Enrolled newCourses = userService.enroll(newEnroll);
-                String payload = mapper.writeValueAsString(newCourses);
-                resp.getWriter().write(payload);
+                userService.enroll(newEnrolled);
 
-                //ErrorResponse errInfo = new ErrorResponse(200, "Course registered!");
-               // resp.getWriter().write(mapper.writeValueAsString(errInfo));
+                ErrorResponse respInfo = new ErrorResponse(201, "Course registered!");
+                resp.getWriter().write(mapper.writeValueAsString(respInfo));
+
             }
-
+        } catch(JsonParseException jpe) {
+            jpe.printStackTrace();
+            resp.setStatus(400);
+            ErrorResponse errResp = new ErrorResponse(401, jpe.getMessage());
+            respWriter.write(mapper.writeValueAsString(errResp));
         } catch(InvalidRequestException | MismatchedInputException e) {
             e.printStackTrace();
             resp.setStatus(400);

@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Swapped the Cors filter to allow traffic from the UI URL.">
+    <list default="true" id="cef5f33b-d5e6-41d7-8482-0ec719960aca" name="Default Changelist" comment="Bettered the Enroll Servlet.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Enrolled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/Enrolled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/pojos/EnrolledCourse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/repositories/SchoolRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/service/ValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/CourseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/johnKimAPI/web/servlet/EnrollServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kim_tran_p0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -66,20 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628881038387</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Committing three POJOs for the purposes of encapsulation">
-      <created>1628882838155</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1628882838155</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Changed the depreciated title of 'projectZero' to something more up-to-date and identifiable.">
-      <created>1628883207067</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1628883207067</updated>
     </task>
     <task id="LOCAL-00004" summary="Added a skeleton to the User Servlet">
       <created>1628884202258</created>
@@ -410,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1630018985930</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Repaired the Course and Enrolled servlet to be a little neater.">
+      <created>1630076024243</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1630076024258</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Bettered the Enroll Servlet.">
+      <created>1630077193323</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1630077193323</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,8 +432,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test Push" />
-    <MESSAGE value="Added a Course Servlet, which will allow queries to read from the Courses database. The POST method can also be used to perform different C(R)UD operations, all of which fill the needs of the Project 1 MVP." />
     <MESSAGE value="Repairing the Cors Filter" />
     <MESSAGE value="Removed the second 'Access-Control-Allow-Origin' header from the filter." />
     <MESSAGE value="Pushing singular access-control header to the database for solely localhost testing." />
@@ -451,7 +455,9 @@
     <MESSAGE value="Repaired the json problem." />
     <MESSAGE value="Swapped the Cors filter to allow traffic from the UI URL." />
     <MESSAGE value="Swapped the Cors filter over to Localhost 3000" />
-    <option name="LAST_COMMIT_MESSAGE" value="Swapped the Cors filter over to Localhost 3000" />
+    <MESSAGE value="Repaired the Course and Enrolled servlet to be a little neater." />
+    <MESSAGE value="Bettered the Enroll Servlet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bettered the Enroll Servlet." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

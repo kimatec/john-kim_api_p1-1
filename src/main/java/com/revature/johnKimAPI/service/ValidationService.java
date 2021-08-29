@@ -134,10 +134,10 @@ public class ValidationService {
         public List<Course> getOpenClasses() { return schoolRepo.findCourseByOpen(); }
 
         // This returns all classes associated with a student username.
-        public Enrolled getMyCourses(String username) {
-
+        public List<Enrolled> getMyCourses(String username) {
                 return schoolRepo.findEnrolledByUsername(username);
         }
+
         // This fetches the list of classes associated with a certain teacher name.
         public List<Course> getTeacherClasses(String teacher) { return schoolRepo.findCourseByTeacher(teacher); }
 
